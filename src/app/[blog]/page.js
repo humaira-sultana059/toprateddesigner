@@ -8,8 +8,8 @@ function Page({ searchParams }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   //  const { slug } = use(params)
   const { blog } = use(searchParams);
-  const blogItem = JSON.parse(blog);
-  const { id, name } = blogItem;
+  const blogItem = blog ? JSON.parse(blog) : null;
+  const { id, name } = blogItem || {};
 
   const filteredBlog = blogDetails.filter((item) => item.id === id)[0];
 
@@ -27,14 +27,14 @@ function Page({ searchParams }) {
       <div className="px-10 max-md:px-5 pb-20">
         <div className="flex flex-row justify-center">
           <img
-            src={filteredBlog.images}
+            src={filteredBlog?.images}
             className="h-[500px] max-sm:h-[380px] w-full object-contain"
           />
         </div>
         <h2 className="text-[48px] max-md:text-[24px] font-semobold font-sans ">
-          {name}
+          {name && name}
         </h2>
-        {filteredBlog.desc()}
+        {filteredBlog?.desc()}
       </div>
 
       {/* Floating Button - Fixed at the Bottom & Centered */}
