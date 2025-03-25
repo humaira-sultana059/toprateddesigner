@@ -1,0 +1,30 @@
+{
+  "name": "mahbub-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "animation": "^0.1.3",
+    "framer-motion": "^12.4.7",
+    "gsap": "^3.12.7",
+    "lucide-react": "^0.477.0",
+    "next": "15.1.3",
+    "nodemailer": "^6.10.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-typed": "^2.0.12",
+    "three": "^0.174.0",
+    "twilio": "^5.5.1",
+    "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
