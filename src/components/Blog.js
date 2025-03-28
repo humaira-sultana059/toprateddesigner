@@ -124,11 +124,11 @@ function Blog() {
                 blog: JSON.stringify({ id: item.id, name: item.headline }),
               },
             }}
-            className="group flex max-sm:flex-col bg-cyan-700/20 backdrop-blur-lg border border-stone-200/30 hover:border-none hover:bg-slate-900 py-5 px-2 my-6 cursor-pointer transition-all duration-1000 ease-in-out hover:shadow-xl hover:shadow-pink-700/50 relative"
+            className="group flex max-sm:flex-col bg-cyan-700/20 backdrop-blur-lg border border-stone-200/30 hover:border-none hover:bg-slate-900 py-5 px-2 my-6 cursor-pointer transition-all duration-1000 ease-in-out hover:shadow-xl hover:shadow-pink-700/50 relative max-sm:items-center"
             key={index}
           >
             {/* Image section - takes 1/3 of the space */}
-            <div className="sm:w-1/3 max-sm:w-full max-sm:h-full max-sm:mb-10  flex justify-center items-center">
+            <div className="sm:w-1/3 max-sm:w-[50%] max-sm:h-full max-sm:mb-10  flex justify-center items-center">
               {item.images()}
             </div>
 

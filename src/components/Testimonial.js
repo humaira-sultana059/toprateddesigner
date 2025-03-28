@@ -27,11 +27,11 @@ const testimonials = [
     image: "/assets/person/clarissa.jpg",
   },
   {
-    name: "Tafsirul Islam",
+    name: "Omer Ben-Ami ",
     position: "Co-Founder, Natgroove",
     message:
       "Outstanding development service! From UI/UX design to backend architecture, everything was executed flawlessly. Their problem-solving skills and efficiency saved us time and resources.",
-    image: "/assets/person/tafsir.png",
+    image: "/assets/person/omer.jpg",
   },
   {
     name: "Suhaib Safwan",
@@ -48,7 +48,7 @@ export default function Testimonial() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 10000); // Rotate every 3 seconds
+    }, 5000); // Rotate every 3 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -116,7 +116,7 @@ export default function Testimonial() {
                 <p className="text-[18px] max-sm:text-[14px] font-edu ">
                   "{testimonial.message}"
                 </p>
-                <div className="flex justify-center my-2">
+                {/* <div className="flex justify-center my-2">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
@@ -125,7 +125,7 @@ export default function Testimonial() {
                       size={14}
                     />
                   ))}
-                </div>
+                </div> */}
                 <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2">
                   <img
                     src={testimonial.image}

@@ -106,31 +106,41 @@ export default function Navbar({ setIsModalOpen }) {
         />
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-white text-3xl focus:outline-none"
+          className="relative w-10 h-[21px] flex flex-col justify-between items-center z-[110]"
         >
-          {isMenuOpen ? null : <FiMenu />}
+          <span
+            className={`block w-8 h-[1px] bg-white transition-transform duration-500 ${
+              isMenuOpen ? "rotate-45 translate-y-2.5" : ""
+            }`}
+          ></span>
+          <span
+            className={`block w-8  h-[1px] bg-white transition-opacity duration-200 ${
+              isMenuOpen ? "opacity-0" : "opacity-100"
+            }`}
+          ></span>
+          <span
+            className={`block w-8 h-[1px] bg-white transition-transform duration-500 ${
+              isMenuOpen ? "-rotate-45 -translate-y-2.5" : ""
+            }`}
+          ></span>
         </button>
       </div>
 
       {/* Side Navbar (Mobile) */}
       <div
-        className={`lg:hidden fixed top-0 right-0 w-64 h-full bg-black/90 text-white p-6 transform transition-transform duration-300 ease-in-out ${
+        className={`lg:hidden fixed top-0 right-0 w-64 h-full bg-black/90 text-white p-6 transform transition-transform duration-300 ease-in-out z-[-10] ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <button
-          onClick={() => setIsMenuOpen(false)}
-          className="absolute top-7 right-4 text-white text-2xl"
-        >
-          <FiX />
-        </button>
-
-        <ul className="mt-16 space-y-8 text-[15px] font-medium">
+        <ul className="mt-24 space-y-8 text-[15px] font-medium">
           {navMenu.map((item, index) => (
             <li
               key={index}
-              onClick={() => handleNavClick(item.id)}
-              className="cursor-pointer hover:text-teal-400 transition duration-200"
+              onClick={() => {
+                handleNavClick(item.id);
+                setIsMenuOpen(false);
+              }}
+              className="cursor-pointer font-cardo hover:text-teal-400 transition duration-200"
             >
               {item.name}
             </li>
@@ -187,7 +197,7 @@ const Tab = ({ children, setPosition, onclick }) => {
         const { width } = ref.current.getBoundingClientRect();
         setPosition({ left: ref.current.offsetLeft, width, opacity: 1 });
       }}
-      className="relative z-10 block cursor-pointer px-3 py-1.5 lg:text-[16px] max-lg:text-[15px] uppercase text-white mix-blend-difference md:px-5 md:py-3"
+      className="relative z-10 block cursor-pointer font-medium font-roboto px-3 py-1.5 lg:text-[16px] max-lg:text-[15px] uppercase text-white mix-blend-difference md:px-5 xl:px-8 md:py-3"
       onClick={onclick}
     >
       {children}

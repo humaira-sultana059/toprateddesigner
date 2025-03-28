@@ -52,7 +52,7 @@ export const socialMedia = [
   },
   {
     name: "Twitter",
-    icon: () => <i className="fa-brands fa-twitter"></i>,
+    icon: () => <i className="fa-brands fa-x-twitter"></i>,
     link: "",
   },
   {
@@ -318,7 +318,7 @@ export const team = [
     name: "Sahriar Santo",
     position: "Graphic Designer",
     image: "/assets/person/santo.png",
-    experience: "4+ years",
+    experience: "5+ years",
     tools: [
       { name: "Adobe Photoshop", percentage: 95 },
       { name: "Illustrator", percentage: 90 },
@@ -332,7 +332,7 @@ export const team = [
     name: "Merajul Islam",
     position: "UI/UX Designer",
     image: "/assets/person/miraz.jpg",
-    experience: "5+ years",
+    experience: "3+ years",
     tools: [
       { name: "Figma", percentage: 95 },
       { name: "Adobe XD", percentage: 90 },
@@ -361,7 +361,7 @@ export const team = [
     name: "Mahbubul Hasan",
     position: "Full Stack Developer",
     image: "/assets/person/mahbub2.png",
-    experience: "6+ years",
+    experience: "4+ years",
     tools: [
       { name: "React", percentage: 90 },
       { name: "Next.js", percentage: 85 },
@@ -376,7 +376,7 @@ export const team = [
     name: "Asfaq Ali Rifat",
     position: "Digital Marketer & SEO Expert",
     image: "/assets/person/asfaq.png",
-    experience: "6+ years",
+    experience: "3+ years",
     tools: [
       { name: "Google Analytics", percentage: 90 },
       { name: "SEMrush", percentage: 85 },

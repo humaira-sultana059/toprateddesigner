@@ -2,12 +2,14 @@
 import ContactModal from "@/components/ContactModal";
 import { blogDetails } from "@/constants/constants";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import React, { use, useState } from "react";
 
-function Page({ searchParams }) {
+function Page() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  //  const { slug } = use(params)
-  const { blog } = use(searchParams);
+  const searchParams = useSearchParams();
+  const blog = searchParams.get("blog");
+
   const blogItem = blog ? JSON.parse(blog) : null;
   const { id, name } = blogItem || {};
 
