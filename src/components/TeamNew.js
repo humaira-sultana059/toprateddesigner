@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 function TeamNew() {
   const [index, setIndex] = useState(0);
   const totalItems = team.length;
-  const duplicatedTeam = [...team, ...team, ...team]; // Duplicate the team array
+  const duplicatedTeam = [...team, ...team, ...team];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,10 +22,14 @@ function TeamNew() {
       style={{
         backgroundImage: "url('assets/shadow-2.png')",
       }}
+      itemScope
+      itemType="https://schema.org/Organization"
     >
-      <p
+      <h1 className="sr-only">Our Team of Technical Experts</h1>
+      <h2
         className="font-arsenal pt-[30px] text-[110px] max-sm:text-[27px] max-md:text-[40px] md:max-lg:text-[80px] max-sm:mb-0 sm:max-md:mb-2 md:max-lg:mb-10 mt-[10px] font-extrabold"
         style={{ textShadow: "20px 10px 10px rgba(0,0,0,0.3)" }}
+        itemProp="name"
       >
         Your Technical
         <span
@@ -35,7 +39,7 @@ function TeamNew() {
           {" "}
           Experts
         </span>
-      </p>
+      </h2>
       <div className="flex w-full  max-sm:h-[65vh] sm:max-md:h-[65vh] md:max-lg:h-[50vh] lg:h-[80vh] justify-center items-center relative overflow-hidden">
         <motion.div
           className="flex flex-row gap-6 max-sm:gap-[60px] w-full"
@@ -44,7 +48,7 @@ function TeamNew() {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           style={{ display: "flex", width: "max-content" }}
         >
-          {duplicatedTeam.map((item, i) => {
+          {duplicatedTeam.map((member, i) => {
             const position = (i - index + totalItems) % totalItems;
             const isCenter = position === 2;
             return (
@@ -56,36 +60,51 @@ function TeamNew() {
                 }}
                 transition={{ duration: 0.5 }}
                 className="backdrop-blur-lg border border-white/80 bg-black/60 py-4 px-4 max-sm:px-1 w-[250px]  max-sm:w-[220px] h-[340px]  flex-shrink-0"
+                itemScope
+                itemType="https://schema.org/Person"
+                itemProp="employee"
               >
                 <div className="flex flex-row justify-center">
                   <img
-                    src={item.image}
+                    src={member.image.src}
+                    alt={member.image.alt}
+                    width={member.image.width}
+                    height={member.image.height}
                     className="w-[100px] h-[110px] shadow-md object-cover border-[1px] border-cyan-400 rounded-[4px]"
+                    loading="lazy"
                   />
                 </div>
                 <div className="mt-[20px] text-center">
-                  <p className="text-[20px]  font-bold">{item.name}</p>
-                  <p className="text-[13px] text-gray-300">{item.position}</p>
+                  <h3 className="text-[20px]  font-bold">{member.name}</h3>
+                  <p className="text-[13px] text-gray-300" itemProp="jobTitle">
+                    {member.position}
+                  </p>
                   <p className="text-[10px] text-gray-400">
-                    {item.experience} of experience
+                    <meta itemProp="experience" content={member.experience} />
+                    {member.experience} of experience
                   </p>
                 </div>
                 {/* Expertise Technologies */}
                 <div className="mt-4">
-                  <p className="text-[16px] text-emerald-400 font-bold font-jose mb-2 text-center">
+                  <h4 className="text-[16px] text-emerald-400 font-bold font-jose mb-2 text-center">
                     Expertise Technologies
-                  </p>
+                  </h4>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    {item.tools.map((tool, idx) => (
+                    {member.tools.map((tool, idx) => (
                       <span
                         key={idx}
                         className="px-[6px] py-[2px] text-[12px] text-stone-200 border-[1px] border-cyan-400 rounded-full"
+                        itemProp="knowsAbout"
                       >
                         {tool.name}
                       </span>
                     ))}
                   </div>
                 </div>
+                <meta itemProp="description" content={member.seoDescription} />
+                {member.socialLinks.linkedin && (
+                  <link itemProp="url" href={member.socialLinks.linkedin} />
+                )}
               </motion.div>
             );
           })}

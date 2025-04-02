@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Portfolio from "@/components/Portfolio";
 import Steps from "@/components/Steps";
 import TeamNew from "@/components/TeamNew";
-import { Technology } from "@/components/Technology";
+import { PartnersSection } from "@/components/PartnersSection";
 import Testimonial from "@/components/Testimonial";
 
 export default function Home() {
@@ -45,7 +45,7 @@ export default function Home() {
       <Portfolio />
       <TeamNew />
       <Testimonial />
-      <Technology />
+      <PartnersSection />
       <Blog />
       <div ref={footerRef}>
         <Footer setIsModalOpen={setIsModalOpen} />

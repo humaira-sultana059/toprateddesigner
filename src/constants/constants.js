@@ -2,40 +2,27 @@ export const navMenu = [
   {
     id: "home",
     name: "Home",
+    ariaLabel: "Navigate to Home section",
   },
   {
     id: "services",
     name: "Services",
+    ariaLabel: "Navigate to Services section",
   },
   {
     id: "portfolio",
     name: "Portfolio",
+    ariaLabel: "Navigate to Portfolio section",
   },
   {
     id: "team",
     name: "About Us",
+    ariaLabel: "Navigate to About Us section",
   },
   {
     id: "blog",
     name: "Blog",
-  },
-];
-
-export const heroHeadings = [
-  {
-    heading: "Innovative Software Developer | Web & Mobile Expertise",
-    shortHeading:
-      "Empowering businesses with tailored digital solutions that resonate with users.",
-  },
-  {
-    heading: "Turning Ideas into Impactful Software Solutionse",
-    shortHeading:
-      "Specializing in creating responsive web and mobile applications for a seamless user experience.",
-  },
-  {
-    heading: "Crafting Digital Experiences with Precision and Passion",
-    shortHeading:
-      "Building modern web and mobile applications that drive innovation and success.",
+    ariaLabel: "Navigate to Blog section",
   },
 ];
 
@@ -43,122 +30,232 @@ export const socialMedia = [
   {
     name: "facebook",
     icon: () => <i className="fa-brands fa-facebook-f"></i>,
-    link: "",
+    link: "https://www.facebook.com/share/1AL9JoEmEA/",
   },
   {
     name: "LinkedIn",
     icon: () => <i className="fa-brands fa-linkedin-in"></i>,
-    link: "",
+    link: "https://www.linkedin.com/company/top-rated-designer/",
   },
   {
     name: "Twitter",
     icon: () => <i className="fa-brands fa-x-twitter"></i>,
-    link: "",
+    link: "https://x.com/topratedesigner?t=CZrD7WLLyYvAHDCn61Qj2A&s=08",
   },
   {
     name: "Whatsapp",
     icon: () => <i className="fa-brands fa-whatsapp"></i>,
-    link: "",
+    link: "https://wa.me/+8801799008100",
   },
-  {
-    name: "Instagram",
-    icon: () => <i className="fa-brands fa-instagram"></i>,
-    link: "",
-  },
+  // {
+  //   name: "Instagram",
+  //   icon: () => <i className="fa-brands fa-instagram"></i>,
+  //   link: "",
+  // },
 ];
 
 export const services = [
   {
+    id: "web-application-development",
     name: "Web Application Development",
     nick_name: "Web Application",
-    icon: () => <img src="/assets/web.png" style={{ width: 60, height: 60 }} />,
-    desc: "Scalable, high-performance web applications with responsive design, real-time data processing, secure authentication, serverless architecture, and seamless payment gateway integration for enhanced digital experiences.",
+    icon: () => (
+      <img
+        src="/assets/web.png"
+        alt="Web application development icon"
+        width="60"
+        height="60"
+        loading="lazy"
+      />
+    ),
+    desc: "Custom web application development services creating scalable, high-performance solutions with responsive design, real-time capabilities, and secure authentication for businesses.",
+    seoDescription:
+      "Professional web application development services for businesses needing custom, scalable solutions with modern technologies like React, Node.js, and serverless architecture.",
     services: [
-      "Custom Web Design",
-      "Responsive Design",
-      "Serverless Application Development",
-      "Payment Gateway Integration",
-      "Database Design & Optimization",
+      "Custom Web Application Design & Development",
+      "Responsive & Mobile-First Web Applications",
+      "Serverless Architecture Implementation",
+      "Secure Payment Gateway Integration",
+      "Database Design & Performance Optimization",
       "Social Media & Third-Party Authentication",
-      "Real-time Data Processing (WebSockets, Firebase, etc.)",
+      "Real-time Data Processing (WebSockets, Firebase)",
+    ],
+    keywords: [
+      "web application development",
+      "custom web apps",
+      "responsive web design",
+      "serverless architecture",
+      "web application security",
     ],
   },
   {
+    id: "mobile-application-development",
     name: "Mobile Application Development",
     nick_name: "Mobile App",
     icon: () => (
-      <img src="/assets/mobile.png" style={{ width: 60, height: 60 }} />
+      <img
+        src="/assets/mobile.png"
+        alt="Mobile app development icon"
+        width="60"
+        height="60"
+        loading="lazy"
+      />
     ),
-    desc: "Expert mobile app development for iOS and Android, ensuring seamless performance, cross-platform compatibility, App Store deployment, and ongoing support for optimal user engagement.",
+    desc: "Native and cross-platform mobile app development for iOS and Android with optimized performance and seamless user experiences.",
+    seoDescription:
+      "Expert mobile app development services for iOS and Android, including React Native cross-platform solutions and App Store deployment.",
     services: [
-      "iOS & Android App Development",
-      "Cross-Platform Development (React Native)",
-      "App Store Deployment",
-      "App Maintenance & Support",
-      "Performance Optimization",
+      "iOS & Android Native App Development",
+      "Cross-Platform Development (React Native, Flutter)",
+      "App Store & Play Store Deployment",
+      "Mobile App Maintenance & Support",
+      "Performance Optimization & Testing",
+    ],
+    keywords: [
+      "mobile app development",
+      "iOS app development",
+      "Android app development",
+      "React Native apps",
+      "app store optimization",
     ],
   },
   {
+    id: "ai-chatbot-implementation",
     name: "AI Chatbot Implementation",
     nick_name: "AI Chatbot",
-    icon: () => <img src="/assets/ai.png" style={{ width: 60, height: 60 }} />,
-    desc: "Enhance customer interactions with AI-powered chatbots, real-time messaging, WebSocket connections, and automated support, delivering seamless communication and engagement.",
+    icon: () => (
+      <img
+        src="/assets/ai.png"
+        alt="AI chatbot implementation icon"
+        width="60"
+        height="60"
+        loading="lazy"
+      />
+    ),
+    desc: "Intelligent chatbot solutions enhancing customer support and engagement through AI and automation.",
+    seoDescription:
+      "AI-powered chatbot implementation services for businesses to automate customer support and improve engagement.",
     services: [
-      "Chatbot API Integration",
-      "Real-Time Chat",
-      "WebSocket Connection",
-      "AI-Powered Chatbots",
-      "Automated Customer Support",
+      "Custom Chatbot API Integration",
+      "Real-Time Messaging Systems",
+      "WebSocket Connection Implementation",
+      "Natural Language Processing (NLP) Chatbots",
+      "24/7 Automated Customer Support",
+    ],
+    keywords: [
+      "AI chatbot",
+      "customer support chatbot",
+      "NLP chatbot",
+      "chatbot integration",
+      "automated messaging",
     ],
   },
   {
+    id: "ui-ux-design-services",
     name: "UI/UX Design Services",
     nick_name: "UI/UX Design",
-    icon: () => <img src="/assets/ui.png" style={{ width: 60, height: 60 }} />,
-    desc: "Create stunning user experiences with research-driven UI/UX design, prototyping, accessibility, and branding, ensuring intuitive and visually engaging digital interfaces.",
+    icon: () => (
+      <img
+        src="/assets/ui.png"
+        alt="UI/UX design services icon"
+        width="60"
+        height="60"
+        loading="lazy"
+      />
+    ),
+    desc: "User-centered design solutions creating intuitive and visually appealing digital experiences.",
+    seoDescription:
+      "Professional UI/UX design services focused on creating user-friendly, accessible, and visually stunning digital products.",
     services: [
-      "User Research & Wireframing",
-      "Mobile & Web UI Design",
-      "Prototyping & Usability Testing",
-      "Design System Development",
-      "Brand Identity & Illustration",
-      "Accessibility Design",
+      "User Research & Experience Strategy",
+      "Mobile & Web Interface Design",
+      "Interactive Prototyping & Testing",
+      "Design System & Component Library Creation",
+      "Brand Identity & Digital Illustration",
+      "WCAG-Compliant Accessibility Design",
+    ],
+    keywords: [
+      "UI/UX design",
+      "user experience design",
+      "web design services",
+      "mobile app design",
+      "accessible design",
     ],
   },
   {
+    id: "cms-development",
     name: "CMS Web Technology System",
-    nick_name: "CMS Web APP",
-    icon: () => <img src="/assets/cms.png" style={{ width: 60, height: 60 }} />,
-    desc: "Custom CMS solutions, including WordPress, Shopify, and headless CMS, with seamless development, performance optimization, and security enhancements for scalable content management.",
+    nick_name: "CMS Web App",
+    icon: () => (
+      <img
+        src="/assets/cms.png"
+        alt="CMS development icon"
+        width="60"
+        height="60"
+        loading="lazy"
+      />
+    ),
+    desc: "Custom content management solutions empowering businesses to manage their digital content efficiently.",
+    seoDescription:
+      "Custom CMS development services including WordPress, Shopify, and headless CMS solutions for content-driven businesses.",
     services: [
-      "WordPress & Shopify Development",
-      "Custom CMS Development (Laravel, Node.js, PHP)",
+      "WordPress & Shopify Custom Development",
+      "Headless CMS Implementation",
       "Plugin & Theme Customization",
-      "Performance & Security Optimization",
-      "E-commerce CMS Development (WooCommerce, Magento)",
+      "CMS Performance Optimization",
+      "E-commerce CMS Solutions (WooCommerce, Magento)",
+      "Enterprise Content Management Systems",
+    ],
+    keywords: [
+      "CMS development",
+      "WordPress development",
+      "Shopify development",
+      "headless CMS",
+      "content management system",
     ],
   },
   {
+    id: "seo-services",
     name: "Search Engine Optimization (SEO)",
     nick_name: "SEO",
-    icon: () => <img src="/assets/seo.png" style={{ width: 60, height: 60 }} />,
-    desc: "Boost online visibility with data-driven SEO strategies, technical audits, keyword research, link building, and content optimization for higher search rankings and organic growth.",
+    icon: () => (
+      <img
+        src="/assets/seo.png"
+        alt="SEO services icon"
+        width="60"
+        height="60"
+        loading="lazy"
+      />
+    ),
+    desc: "Comprehensive SEO strategies to improve online visibility and drive organic traffic.",
+    seoDescription:
+      "Professional SEO services including technical audits, keyword strategy, and content optimization to boost search rankings.",
     services: [
-      "On-Page SEO Optimization",
-      "Technical SEO Audits",
-      "Keyword Research & Strategy",
-      "Link Building & Outreach",
-      "Local SEO & Google My Business Optimization",
-      "Content Strategy & SEO Writing",
+      "Comprehensive On-Page SEO Optimization",
+      "Technical SEO Audits & Fixes",
+      "Strategic Keyword Research & Implementation",
+      "Quality Link Building Campaigns",
+      "Local SEO & Google Business Profile Optimization",
+      "SEO Content Strategy & Copywriting",
+    ],
+    keywords: [
+      "SEO services",
+      "search engine optimization",
+      "technical SEO",
+      "local SEO",
+      "content marketing",
     ],
   },
 ];
 
 export const portfolio = [
   {
+    id: "bullman-equipment",
     name: "Bullman Equipment",
     type: "Ecommerce Platform",
-    desc: "Developed Bullman Equipment’s web and mobile applications for gymnastic products, ensuring seamless shopping with secure Stripe & Mollie payments, robust authentication, and efficient cart and order management for an optimized user experience.",
+    desc: "Developed Bullman Equipment's web and mobile applications for gymnastic products, ensuring seamless shopping with secure Stripe & Mollie payments, robust authentication, and efficient cart and order management for an optimized user experience.",
+    seoDescription:
+      "Custom ecommerce platform for gymnastic equipment with secure payment gateways and mobile app",
     technologies: [
       "Next.js",
       "Node.js",
@@ -168,16 +265,55 @@ export const portfolio = [
       "React Native",
     ],
     images: [
-      "/assets/portfolio/bull2.png",
-      "/assets/portfolio/bull3.png",
-      "/assets/portfolio/bullman.png",
-      "/assets/portfolio/bull4.png",
+      {
+        src: "/assets/portfolio/bull2.png",
+        alt: "Bullman Equipment ecommerce homepage showing product categories",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/assets/portfolio/bull3.png",
+        alt: "Bullman Equipment product detail page with specifications",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/assets/portfolio/bullman.png",
+        alt: "Bullman Equipment mobile app interface with shopping cart",
+        width: 600,
+        height: 1200,
+      },
+      {
+        src: "/assets/portfolio/bull4.png",
+        alt: "Bullman Equipment secure checkout process with payment options",
+        width: 1200,
+        height: 800,
+      },
+    ],
+    keywords: [
+      "ecommerce development",
+      "gymnastic equipment store",
+      "Stripe integration",
+      "React Native app",
+      "shopping cart system",
+    ],
+    launchDate: "2023-05-15",
+    client: "Bullman Equipment Inc.",
+    projectUrl: "https://bullmanequipment.com",
+    features: [
+      "Multi-vendor marketplace",
+      "Custom ODOO ERP integration",
+      "Mobile-first responsive design",
+      "One-click checkout process",
     ],
   },
   {
+    id: "solvemeet",
     name: "SolveMeet",
-    type: "Service Platform",
-    desc: "Developed SolveMeet’s web and mobile applications, a consultation platform connecting Advisors and Clients via chat, audio, and video calls. Integrated bKash, Stripe, and PayPal for seamless payments and implemented Socket.IO for real-time communication, ensuring a smooth and interactive experience.",
+    type: "Consultation Platform",
+    desc: "Developed SolveMeet's web and mobile applications, a consultation platform connecting Advisors and Clients via chat, audio, and video calls. Integrated bKash, Stripe, and PayPal for seamless payments and implemented Socket.IO for real-time communication.",
+    seoDescription:
+      "Consultation platform with real-time communication and multiple payment gateways",
     technologies: [
       "Next.js",
       "Firebase",
@@ -185,32 +321,122 @@ export const portfolio = [
       "Socket.io",
       "React Native",
     ],
-    images: ["/assets/portfolio/solve1.png", "/assets/portfolio/solve2.png"],
+    images: [
+      {
+        src: "/assets/portfolio/solve1.png",
+        alt: "SolveMeet advisor dashboard showing scheduled sessions",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/assets/portfolio/solve2.png",
+        alt: "SolveMeet video call interface with screen sharing options",
+        width: 1200,
+        height: 800,
+      },
+    ],
+    keywords: [
+      "consultation platform",
+      "real-time chat",
+      "video calling app",
+      "payment integration",
+      "expert advice platform",
+    ],
+    launchDate: "2023-08-22",
+    client: "SolveMeet Technologies",
+    projectUrl: "https://solvemeet.com",
+    features: [
+      "WebRTC video conferencing",
+      "Multi-currency payment system",
+      "Session recording",
+      "Rating and review system",
+    ],
   },
   {
+    id: "eastgold-investments",
     name: "Eastgold",
     type: "Investment Platform",
-    desc: "Developed Eastgold’s web and mobile applications, a gold investment platform with a comprehensive dashboard for Admins, Managers, and Cashiers. Implemented investment management, transaction tracking, user management, and secure transactions for seamless and efficient investment oversight.",
+    desc: "Developed Eastgold's web and mobile applications, a gold investment platform with a comprehensive dashboard for Admins, Managers, and Cashiers. Implemented investment management, transaction tracking, user management, and secure transactions for seamless and efficient investment oversight.",
+    seoDescription:
+      "Gold investment platform with multi-level user dashboards and transaction tracking",
     technologies: ["React", "Express.js", "WebSockets", "React Native", "Expo"],
     images: [
-      "/assets/portfolio/eastgold1.png",
-      "/assets/portfolio/eastgold2.png",
+      {
+        src: "/assets/portfolio/eastgold1.png",
+        alt: "Eastgold investment dashboard showing portfolio performance",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/assets/portfolio/eastgold2.png",
+        alt: "Eastgold mobile app with transaction history",
+        width: 600,
+        height: 1200,
+      },
+    ],
+    keywords: [
+      "investment platform",
+      "gold trading",
+      "financial dashboard",
+      "transaction tracking",
+      "wealth management",
+    ],
+    launchDate: "2023-03-10",
+    client: "Eastgold Financial",
+    projectUrl: "https://eastgoldinvestments.com",
+    features: [
+      "Real-time gold price updates",
+      "Multi-tier user permissions",
+      "PDF report generation",
+      "Biometric authentication",
     ],
   },
   {
+    id: "advisor-platform",
     name: "Advisor",
-    type: "Social Engage Platform",
+    type: "Social Engagement Platform",
     desc: "Discover a platform where advice fosters learning, growth, and meaningful connections. Engage with a community driven by real experiences and shared wisdom. We developed its mobile app with features like posts, reels, comments, live chat, sharing, and likes for seamless interaction.",
+    seoDescription:
+      "Social platform for knowledge sharing with community engagement features",
     technologies: ["React Native", "Expo", "Python", "MySQL", "Fast API"],
     images: [
-      "/assets/portfolio/advisor1.png",
-      "/assets/portfolio/advisor2.png",
+      {
+        src: "/assets/portfolio/advisor1.png",
+        alt: "Advisor platform feed showing community posts",
+        width: 600,
+        height: 1200,
+      },
+      {
+        src: "/assets/portfolio/advisor2.png",
+        alt: "Advisor platform live chat interface",
+        width: 600,
+        height: 1200,
+      },
+    ],
+    keywords: [
+      "social platform",
+      "knowledge sharing",
+      "community app",
+      "expert advice",
+      "mobile engagement",
+    ],
+    launchDate: "2023-11-05",
+    client: "Advisor Social Inc.",
+    projectUrl: "https://advisor.com",
+    features: [
+      "Content moderation system",
+      "Algorithmic feed ranking",
+      "Live streaming capability",
+      "Push notification system",
     ],
   },
   {
+    id: "tranzaxx-blog",
     name: "Tranzaxx",
     type: "Blog Platform",
     desc: "This is a blog-based social engagement platform featuring post creation, comments, and real-time chats, along with dedicated dashboards for admins and users. We developed both the web and mobile applications to ensure a seamless and interactive experience.",
+    seoDescription:
+      "Blog platform with social features and real-time engagement",
     technologies: [
       "Next.js",
       "Node.js",
@@ -219,105 +445,167 @@ export const portfolio = [
       "MongoDB",
     ],
     images: [
-      "/assets/portfolio/tranzaxx2.png",
-      "/assets/portfolio/tranzaxx1.png",
-      "/assets/portfolio/tranzaxx3.png",
+      {
+        src: "/assets/portfolio/tranzaxx2.png",
+        alt: "Tranzaxx blog post creation interface",
+        width: 1200,
+        height: 800,
+      },
+      {
+        src: "/assets/portfolio/tranzaxx1.png",
+        alt: "Tranzaxx mobile app with dark mode",
+        width: 600,
+        height: 1200,
+      },
+      {
+        src: "/assets/portfolio/tranzaxx3.png",
+        alt: "Tranzaxx admin dashboard analytics",
+        width: 1200,
+        height: 800,
+      },
+    ],
+    keywords: [
+      "blog platform",
+      "content creation",
+      "social blogging",
+      "real-time chat",
+      "publishing system",
+    ],
+    launchDate: "2023-07-18",
+    client: "Tranzaxx Media",
+    projectUrl: "https://tranzaxx.com",
+    features: [
+      "WYSIWYG editor",
+      "Multi-author support",
+      "Dark mode toggle",
+      "Content analytics dashboard",
     ],
   },
 ];
 
-export const firstLogo = [
+export const partners = [
   {
-    name: "tranzaxx",
-    icon: () => (
-      <img
-        src="/assets/patner/tranzaxx.png"
-        style={{ backgroundColor: "#fff" }}
-      />
-    ),
+    id: "tranzaxx",
+    name: "Tranzaxx",
+    url: "https://tranzaxx.com",
+    logo: {
+      src: "/assets/patner/tranzaxx.png",
+      alt: "Tranzaxx company logo",
+      width: 100,
+      height: 100,
+    },
+    description:
+      "Content publishing platform specializing in educational materials",
   },
   {
-    name: "nutgrove",
-    icon: () => (
-      <img
-        src="/assets/patner/nutgrove.png"
-        // style={{ width: 100, height: 100 }}
-      />
-    ),
+    id: "natgroove",
+    name: "Natgroove",
+    url: "https://natgroove.com",
+    logo: {
+      src: "/assets/patner/nutgrove.png",
+      alt: "Natgroove company logo",
+      width: 100,
+      height: 100,
+    },
+    description: "Sustainable agriculture technology company",
   },
   {
-    name: "ndemi",
-    icon: () => (
-      <img
-        src="/assets/patner/ndemi.png"
-        //style={{ width: 100, height: 100 }}
-      />
-    ),
+    id: "ndemi",
+    name: "Ndemi Solutions",
+    url: "https://ndemisolutions.com",
+    logo: {
+      src: "/assets/patner/ndemi.png",
+      alt: "Ndemi Solutions company logo",
+      width: 100,
+      height: 100,
+    },
+    description: "Enterprise software development firm",
   },
   {
-    name: "kn",
-    icon: () => (
-      <img
-        src="/assets/patner/kn.png"
-        //style={{ width: 100, height: 100 }}
-      />
-    ),
+    id: "kn",
+    name: "KN Technologies",
+    url: "https://kntechnologies.com",
+    logo: {
+      src: "/assets/patner/kn.png",
+      alt: "KN Technologies company logo",
+      width: 100,
+      height: 100,
+    },
+    description: "Industrial automation specialists",
   },
   {
-    name: "bluehouse",
-    icon: () => (
-      <img
-        src="/assets/patner/bluehouse.png"
-        // style={{ width: 100, height: 100 }}
-      />
-    ),
+    id: "bluehouse",
+    name: "Bluehouse Capital",
+    url: "https://bluehousecapital.com",
+    logo: {
+      src: "/assets/patner/bluehouse.png",
+      alt: "Bluehouse Capital company logo",
+      width: 100,
+      height: 100,
+    },
+    description: "Venture capital and investment firm",
   },
   {
-    name: "advisor",
-    icon: () => (
-      <img
-        src="/assets/patner/advisor.png"
-        className="sm:w-[120px] sm:h-[40px]"
-        //style={{ width: 120, height: 40 }}
-      />
-    ),
+    id: "advisor",
+    name: "Advisor Platform",
+    url: "https://joinadvisor.com",
+    logo: {
+      src: "/assets/patner/advisor.png",
+      alt: "Advisor Platform company logo",
+      width: 120,
+      height: 40,
+    },
+    description: "Professional networking and knowledge sharing platform",
   },
   {
-    name: "wemasomo",
-    icon: () => (
-      <img
-        src="/assets/patner/wemasomo.png"
-        className="w-[100px] h-[80px] max-sm:w-full max-sm:h-full"
-        // style={{ width: 100, height: 80 }}
-      />
-    ),
+    id: "wemasomo",
+    name: "WeMasomo",
+    url: "https://wemasomo.org",
+    logo: {
+      src: "/assets/patner/wemasomo.png",
+      alt: "WeMasomo nonprofit organization logo",
+      width: 100,
+      height: 80,
+    },
+    description: "Nonprofit organization promoting digital education in Africa",
   },
   {
-    name: "bullman",
-    icon: () => (
-      <img
-        src="/assets/patner/bullman.png"
-        //style={{ width: 100, height: 100 }}
-      />
-    ),
+    id: "bullman",
+    name: "Bullman Equipment",
+    url: "https://bullmanequipment.com",
+    logo: {
+      src: "/assets/patner/bullman.png",
+      alt: "Bullman Equipment company logo",
+      width: 100,
+      height: 100,
+    },
+    description: "Gymnastic equipment manufacturer and retailer",
   },
   {
-    name: "solvemeet",
-    icon: () => (
-      <img
-        src="/assets/patner/solvemeet.png"
-        className="sm:w-[120px] sm:h-[40px]"
-        //style={{ width: 120, height: 40 }}
-      />
-    ),
+    id: "solvemeet",
+    name: "SolveMeet",
+    url: "https://solvemeet.com",
+    logo: {
+      src: "/assets/patner/solvemeet.png",
+      alt: "SolveMeet consultation platform logo",
+      width: 120,
+      height: 40,
+    },
+    description: "Online consultation and expert advice platform",
   },
 ];
 
 export const team = [
   {
+    id: "sahriar-santo",
     name: "Sahriar Santo",
     position: "Graphic Designer",
-    image: "/assets/person/santo.png",
+    image: {
+      src: "/assets/person/santo.png",
+      alt: "Sahriar Santo, Graphic Designer at our company",
+      width: 200,
+      height: 200,
+    },
     experience: "5+ years",
     tools: [
       { name: "Adobe Photoshop", percentage: 95 },
@@ -326,12 +614,30 @@ export const team = [
       { name: "Sketch", percentage: 80 },
     ],
     description:
-      "A creative graphic designer with a strong eye for detail, specializing in branding, digital illustration, and UI design. With expertise in Adobe Photoshop, Illustrator, and Figma, he crafts visually engaging designs that communicate brand identity effectively. His designs enhance user engagement and ensure a compelling visual storytelling experience.",
+      "Creative graphic designer specializing in branding and UI design with expertise in Adobe Creative Suite.",
+    seoDescription:
+      "Professional graphic designer with 5+ years experience in branding and digital illustration",
+    expertise: [
+      "Brand Identity",
+      "Digital Illustration",
+      "UI Design",
+      "Visual Storytelling",
+    ],
+    socialLinks: {
+      linkedin: "https://linkedin.com/in/sahriarsanto",
+      dribbble: "https://dribbble.com/sahriarsanto",
+    },
   },
   {
+    id: "merajul-islam",
     name: "Merajul Islam",
     position: "UI/UX Designer",
-    image: "/assets/person/miraz.jpg",
+    image: {
+      src: "/assets/person/miraz.jpg",
+      alt: "Merajul Islam, UI/UX Designer at our company",
+      width: 200,
+      height: 200,
+    },
     experience: "3+ years",
     tools: [
       { name: "Figma", percentage: 95 },
@@ -340,12 +646,30 @@ export const team = [
       { name: "InVision", percentage: 80 },
     ],
     description:
-      "An experienced UI/UX designer focused on creating user-friendly and visually appealing designs. Skilled in Figma, Adobe XD, and Sketch, he applies modern design principles to craft intuitive interfaces. Passionate about usability and accessibility, he enhances user interaction and engagement by designing seamless and aesthetically pleasing digital experiences.",
+      "UI/UX designer focused on creating intuitive and accessible digital experiences.",
+    seoDescription:
+      "Experienced UI/UX designer with expertise in Figma and user-centered design",
+    expertise: [
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Design Systems",
+    ],
+    socialLinks: {
+      linkedin: "https://linkedin.com/in/merajulislam",
+      behance: "https://behance.net/merajulislam",
+    },
   },
   {
+    id: "humaira-sultana",
     name: "Humaira Sultana",
-    image: "/assets/person/humaira.jpg",
     position: "Web & Mobile App Developer",
+    image: {
+      src: "/assets/person/humaira.jpg",
+      alt: "Humaira Sultana, Web & Mobile Developer at our company",
+      width: 200,
+      height: 200,
+    },
     experience: "5+ years",
     tools: [
       { name: "React", percentage: 90 },
@@ -355,12 +679,30 @@ export const team = [
       { name: "Node.js", percentage: 80 },
     ],
     description:
-      "Expert in developing scalable and high-performance web and mobile applications. Skilled in React, Next.js, Node.js, and MongoDB, she focuses on creating intuitive user interfaces and robust backend solutions.",
+      "Full-stack developer specializing in React, Next.js and mobile applications.",
+    seoDescription:
+      "Senior developer with 5+ years experience in React and React Native",
+    expertise: [
+      "Frontend Architecture",
+      "Performance Optimization",
+      "Cross-platform Apps",
+      "API Integration",
+    ],
+    socialLinks: {
+      linkedin: "https://linkedin.com/in/humairasultana",
+      github: "https://github.com/humairasultana",
+    },
   },
   {
+    id: "mahbubul-hasan",
     name: "Mahbubul Hasan",
     position: "Full Stack Developer",
-    image: "/assets/person/mahbub2.png",
+    image: {
+      src: "/assets/person/mahbub2.png",
+      alt: "Mahbubul Hasan, Full Stack Developer at our company",
+      width: 200,
+      height: 200,
+    },
     experience: "4+ years",
     tools: [
       { name: "React", percentage: 90 },
@@ -370,12 +712,30 @@ export const team = [
       { name: "Docker", percentage: 85 },
     ],
     description:
-      "A highly skilled full-stack developer with expertise in JavaScript, TypeScript, and backend technologies like Express.js and PostgreSQL.",
+      "Full-stack developer with expertise in JavaScript, TypeScript and backend systems.",
+    seoDescription:
+      "Full stack developer specializing in modern web technologies and DevOps",
+    expertise: [
+      "Database Design",
+      "System Architecture",
+      "CI/CD Pipelines",
+      "Cloud Deployment",
+    ],
+    socialLinks: {
+      linkedin: "https://linkedin.com/in/mahbubulhasan",
+      twitter: "https://twitter.com/mahbubulhasan",
+    },
   },
   {
+    id: "asfaq-ali-rifat",
     name: "Asfaq Ali Rifat",
     position: "Digital Marketer & SEO Expert",
-    image: "/assets/person/asfaq.png",
+    image: {
+      src: "/assets/person/asfaq.png",
+      alt: "Asfaq Ali Rifat, Digital Marketer at our company",
+      width: 200,
+      height: 200,
+    },
     experience: "3+ years",
     tools: [
       { name: "Google Analytics", percentage: 90 },
@@ -384,80 +744,122 @@ export const team = [
       { name: "Meta Ads", percentage: 90 },
     ],
     description:
-      "A results-driven digital marketing and SEO expert specializing in increasing online visibility and brand awareness. Skilled in Google Analytics, SEMrush, and Meta Ads, he creates data-driven strategies to optimize search rankings and drive traffic. His expertise in digital advertising ensures businesses achieve sustainable growth and competitive market positioning.",
+      "Digital marketing specialist focused on SEO and data-driven growth strategies.",
+    seoDescription:
+      "SEO expert with 3+ years experience in digital marketing and analytics",
+    expertise: [
+      "SEO Strategy",
+      "Content Marketing",
+      "PPC Campaigns",
+      "Conversion Optimization",
+    ],
+    socialLinks: {
+      linkedin: "https://linkedin.com/in/asfaqalirifat",
+      twitter: "https://twitter.com/asfaqalirifat",
+    },
   },
 ];
 
 export const blogs = [
   {
     id: 1,
-    headline: "How to Build High-Performance Websites",
-    type: "Website Development",
-    desc: "Learn how to create fast, responsive, and user-friendly websites that align with your business goals. From front-end design to back-end development, we ensure seamless performance, mobile optimization, and engaging UI/UX. Build a website that stands out, improves conversions, and enhances the user experience effortlessly.",
+    headline: "How to Build High-Performance Websites: A Complete Guide",
+    type: "website-development",
+    slug: "how-to-build-high-performance-websites",
+    desc: "Learn how to create fast, responsive, and user-friendly websites that align with your business goals. From front-end design to back-end development, we ensure seamless performance, mobile optimization, and engaging UI/UX.",
+    metaDesc:
+      "Discover expert tips for building high-performance websites with optimal speed, responsiveness, and user experience. Learn web development best practices.",
     images: () => (
       <img
         src="/assets/websit.png"
+        alt="High performance website development illustration"
         className="w-[200px] h-[200px] md:max-lg:w-[100px] md:max-lg:h-[100px] max-sm:w-[150px] max-sm:h-[100px]"
+        loading="lazy"
       />
     ),
   },
   {
     id: 2,
-    headline: "Seamless Apps, Engaging Experiences",
-    type: "Mobile App Development",
-    desc: "Design and develop high-quality mobile applications for iOS and Android that captivate users. Our team specializes in intuitive UI/UX, smooth navigation, and robust functionality. Whether you need an e-commerce app, a business tool, or a social platform, we create apps that deliver outstanding performance and user satisfaction.",
+    headline: "Seamless Mobile Apps: Creating Engaging User Experiences",
+    type: "mobile-app-development",
+    slug: "seamless-mobile-apps-engaging-experiences",
+    desc: "Design and develop high-quality mobile applications for iOS and Android that captivate users. Our team specializes in intuitive UI/UX, smooth navigation, and robust functionality.",
+    metaDesc:
+      "Expert guide to developing seamless mobile apps with engaging user experiences. Learn mobile app development best practices for iOS and Android.",
     images: () => (
       <img
         src="/assets/mobile1.png"
+        alt="Mobile app development illustration"
         className="w-[200px] h-[200px] md:max-lg:w-[100px] md:max-lg:h-[100px] max-sm:w-[150px] max-sm:h-[100px]"
+        loading="lazy"
       />
     ),
   },
   {
     id: 3,
-    headline: "Boost Rankings, Drive Traffic, Get Results",
-    type: "SEO",
-    desc: "Enhance your website’s visibility with our proven SEO strategies. We optimize content, improve site speed, and implement effective keyword targeting to rank higher on search engines. From on-page SEO to technical enhancements, our solutions drive organic traffic and help businesses achieve long-term digital success.",
+    headline: "SEO Strategies: Boost Rankings and Drive Organic Traffic",
+    type: "seo",
+    slug: "seo-strategies-boost-rankings",
+    desc: "Enhance your website's visibility with our proven SEO strategies. We optimize content, improve site speed, and implement effective keyword targeting to rank higher on search engines.",
+    metaDesc:
+      "Learn effective SEO strategies to boost your website rankings and drive organic traffic. Discover on-page and technical SEO best practices.",
     images: () => (
       <img
         src="/assets/seo1.png"
+        alt="SEO optimization illustration"
         className="w-[200px] h-[200px] md:max-lg:w-[100px] md:max-lg:h-[100px] max-sm:w-[150px] max-sm:h-[100px]"
+        loading="lazy"
       />
     ),
   },
   {
     id: 4,
-    headline: "Scalable, Secure, and Future-Ready",
-    type: "Cloud Solutions",
-    desc: "Utilize cloud computing to enhance business efficiency, security, and scalability. Our cloud solutions help you store, manage, and access data seamlessly while ensuring security compliance. From cloud migration to infrastructure management, we provide tailored solutions to meet your evolving business needs.",
+    headline: "Cloud Solutions: Scalable and Secure Business Infrastructure",
+    type: "cloud-solutions",
+    slug: "cloud-solutions-scalable-secure",
+    desc: "Utilize cloud computing to enhance business efficiency, security, and scalability. Our cloud solutions help you store, manage, and access data seamlessly while ensuring security compliance.",
+    metaDesc:
+      "Discover how scalable and secure cloud solutions can transform your business infrastructure. Learn about cloud migration and management.",
     images: () => (
       <img
         src="/assets/cloud.png"
+        alt="Cloud computing solutions illustration"
         className="w-[200px] h-[200px] md:max-lg:w-[100px] md:max-lg:h-[100px] max-sm:w-[150px] max-sm:h-[100px]"
+        loading="lazy"
       />
     ),
   },
   {
     id: 5,
-    headline: "Smart AI to Transform Your Business",
-    type: "AI Solutions",
-    desc: "Leverage artificial intelligence to automate processes, analyze data, and improve customer interactions. From chatbots to machine learning models, AI solutions streamline operations and provide actionable insights. Stay ahead in the digital landscape by integrating AI-driven technology tailored to your business goals.",
+    headline: "AI Solutions: Transforming Businesses with Smart Technology",
+    type: "ai-solutions",
+    slug: "ai-solutions-transform-business",
+    desc: "Leverage artificial intelligence to automate processes, analyze data, and improve customer interactions. From chatbots to machine learning models, AI solutions streamline operations.",
+    metaDesc:
+      "Explore how AI solutions can transform your business with automation and data analysis. Learn about implementing AI technology effectively.",
     images: () => (
       <img
         src="/assets/ai1.png"
+        alt="Artificial intelligence solutions illustration"
         className="w-[200px] h-[200px] md:max-lg:w-[100px] md:max-lg:h-[100px] max-sm:w-[150px] max-sm:h-[100px]"
+        loading="lazy"
       />
     ),
   },
   {
     id: 6,
-    headline: "Transform Your Website with Cutting-Edge CMS Technology",
-    type: "CMS Technology",
-    desc: "In today’s digital-first world, a powerful CMS (Content Management System) is the backbone of any successful website. It empowers businesses to create fast, responsive, and user-friendly sites that drive engagement and conversions. Discover how CMS technology can elevate your online presence, streamline content management, and deliver exceptional user experiences effortlessly.",
+    headline: "CMS Technology: Powering Modern Websites with Ease",
+    type: "cms-technology",
+    slug: "cms-technology-modern-websites",
+    desc: "Discover how CMS technology can elevate your online presence, streamline content management, and deliver exceptional user experiences effortlessly.",
+    metaDesc:
+      "Learn how CMS technology powers modern websites with easy content management and exceptional user experiences. Explore CMS benefits.",
     images: () => (
       <img
         src="/assets/security.png"
+        alt="CMS technology illustration"
         className="w-[200px] h-[200px] md:max-lg:w-[100px] md:max-lg:h-[100px] max-sm:w-[150px] max-sm:h-[100px]"
+        loading="lazy"
       />
     ),
   },
@@ -466,8 +868,14 @@ export const blogs = [
 export const blogDetails = [
   {
     id: 1,
-    headline: "How to Build High-Performance Websites",
-    type: "Website Development",
+    headline: "How to Build High-Performance Websites: A Complete Guide",
+    type: "website-development",
+    slug: "how-to-build-high-performance-websites",
+    metaTitle: "How to Build High-Performance Websites | Expert Guide",
+    metaDesc:
+      "Learn the essential strategies for building fast, responsive, and user-friendly websites that drive conversions and improve search rankings.",
+    publishedDate: "2024-10-15",
+    author: "Web Development Team",
     desc: () => (
       <div className="flex flex-col">
         <p className="mt-4 text-justify">
@@ -562,11 +970,20 @@ export const blogDetails = [
       </div>
     ),
     images: "/assets/blog/website.jpg",
+    altText: "High-performance website development process illustration",
   },
   {
     id: 2,
-    headline: "Seamless Apps, Engaging Experiences",
-    type: "Mobile App Development",
+    headline:
+      "Seamless Mobile App Development: Creating Engaging User Experiences",
+    type: "mobile-app-development",
+    slug: "seamless-mobile-app-engaging-experiences",
+    metaTitle:
+      "Mobile App Development Guide: Building Seamless User Experiences",
+    metaDesc:
+      "Discover expert strategies for creating high-performance mobile apps with engaging UX, robust security, and cutting-edge technologies like AI and 5G.",
+    publishedDate: "2024-09-20",
+    author: "Mobile Development Team",
     desc: () => (
       <div className="flex flex-col">
         <p className="mt-4 text-justify">
@@ -679,11 +1096,21 @@ export const blogDetails = [
       </div>
     ),
     images: "/assets/blog/mobile.jpg",
+    altText: "Mobile app development process showing UI design and coding",
+    readingTime: "8 min read",
+    tags: ["mobile development", "UX design", "app security", "AI integration"],
   },
   {
     id: 3,
-    headline: "Boost Rankings, Drive Traffic, Get Results",
-    type: "SEO",
+    headline: "SEO Strategies: Boost Rankings, Drive Traffic & Get Results",
+    type: "seo",
+    slug: "seo-strategies-boost-rankings",
+    metaTitle:
+      "Proven SEO Strategies to Increase Rankings & Drive Targeted Traffic",
+    metaDesc:
+      "Discover expert SEO techniques to improve search rankings, attract quality traffic, and convert visitors. Learn about technical SEO, content optimization, and mobile-first strategies.",
+    publishedDate: "2025-02-04",
+    author: "SEO Specialist Team",
     desc: () => (
       <div className="flex flex-col">
         <p className="mt-4 text-justify">
@@ -782,11 +1209,27 @@ export const blogDetails = [
       </div>
     ),
     images: "/assets/blog/seo.jpg",
+    altText: "SEO optimization process showing search rankings and analytics",
+    readingTime: "7 min read",
+    tags: [
+      "search engine optimization",
+      "technical SEO",
+      "content marketing",
+      "mobile SEO",
+    ],
+    schemaType: "HowTo",
   },
   {
     id: 4,
-    headline: "Scalable, Secure, and Future-Ready",
-    type: "Cloud Solutions",
+    headline: "Cloud Solutions: Scalable, Secure & Future-Ready Technology",
+    type: "cloud-solutions",
+    slug: "scalable-secure-cloud-solutions",
+    metaTitle:
+      "Enterprise Cloud Solutions for Scalability, Security & Future Growth",
+    metaDesc:
+      "Discover how cloud computing enhances business agility with scalable infrastructure, enterprise-grade security, and future-ready technology integration.",
+    publishedDate: "2025-01-15",
+    author: "Cloud Architecture Team",
     desc: () => (
       <div className="flex flex-col">
         <p className="mt-4 text-justify">
@@ -888,11 +1331,28 @@ export const blogDetails = [
       </div>
     ),
     images: "/assets/blog/ux.jpg",
+    altText:
+      "Cloud computing infrastructure with servers and network connections",
+    readingTime: "8 min read",
+    tags: [
+      "cloud computing",
+      "cloud security",
+      "scalable infrastructure",
+      "digital transformation",
+    ],
+    schemaType: "TechArticle",
   },
   {
     id: 5,
-    headline: "Smart AI to Transform Your Business",
-    type: "AI Solutions",
+    headline: "AI Solutions: Transform Your Business with Smart Technology",
+    type: "ai-solutions",
+    slug: "ai-solutions-transform-business",
+    metaTitle:
+      "Enterprise AI Solutions for Business Transformation | Smart Automation",
+    metaDesc:
+      "Discover how AI solutions can revolutionize your business operations with intelligent automation, predictive analytics, and enhanced customer experiences.",
+    publishedDate: "2024-02-20",
+    author: "AI Solutions Team",
     desc: () => (
       <div className="flex flex-col">
         <p className="mt-4 text-justify">
@@ -972,11 +1432,29 @@ export const blogDetails = [
       </div>
     ),
     images: "/assets/blog/ai.jpg",
+    altText:
+      "AI technology transforming business operations with automation and analytics",
+    readingTime: "7 min read",
+    tags: [
+      "artificial intelligence",
+      "machine learning",
+      "business automation",
+      "predictive analytics",
+    ],
+    schemaType: "TechArticle",
   },
   {
     id: 6,
-    headline: "Transform Your Website with Cutting-Edge CMS Technology",
-    type: "Cybersecurity",
+    headline:
+      "CMS Technology: Transform Your Website with Cutting-Edge Solutions",
+    type: "cms-technology",
+    slug: "cms-technology-transform-website",
+    metaTitle:
+      "Modern CMS Technology for High-Performance Websites | Web Development",
+    metaDesc:
+      "Discover how cutting-edge CMS technology helps create fast, responsive websites with superior UX, SEO optimization, and robust security features.",
+    publishedDate: "2025-03-10",
+    author: "Web Technology Team",
     desc: () => (
       <div className="flex flex-col">
         <p className="mt-4 text-justify">
@@ -1071,6 +1549,23 @@ export const blogDetails = [
       </div>
     ),
     images: "/assets/blog/cms.jpg",
+    altText: "Modern CMS platform interface showing website management tools",
+    readingTime: "8 min read",
+    tags: [
+      "content management system",
+      "website development",
+      "CMS technology",
+      "web design",
+    ],
+    schemaType: "TechArticle",
+
+    keyFeatures: [
+      "Responsive design capabilities",
+      "Built-in SEO optimization tools",
+      "Mobile-first architecture",
+      "Enterprise-grade security",
+      "E-commerce integration",
+    ],
   },
 ];
 

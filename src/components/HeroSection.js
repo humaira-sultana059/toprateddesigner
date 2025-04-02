@@ -10,12 +10,12 @@ function HeroSection({ setIsModalOpen }) {
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: [
-        "Web Application",
-        "Mobile App",
-        "CMS Web App",
-        "AI Chatbot",
-        "UI/UX Design",
-        "SEO",
+        "Custom Web Applications",
+        "Mobile App Development",
+        "CMS Solutions",
+        "AI-Powered Chatbots",
+        "UI/UX Design Services",
+        "SEO Optimization",
       ],
       typeSpeed: 70,
       backSpeed: 50,
@@ -107,12 +107,13 @@ function HeroSection({ setIsModalOpen }) {
   }, []);
 
   return (
-    <div
+    <section
       id="home"
       className="bg-stone-950 h-[100vh] max-sm:h-[44vh] sm:max-md:h-[60vh] md:max-lg:h-[50vh] lg:max-xl:h-[70vh] w-full bg-contain bg-no-repeat bg-center "
       style={{
-        backgroundImage: "url('assets/rainbow.png')",
+        backgroundImage: "url('assets/TopRatedBg.png')",
       }}
+      aria-label="Top Rated Design"
     >
       <canvas
         ref={canvasRef}
@@ -124,37 +125,70 @@ function HeroSection({ setIsModalOpen }) {
           height: "100%",
           pointerEvents: "none",
         }}
+        aria-hidden="true"
       />
       <div className="flex flex-row w-full max-sm:px-5 md:max-xl:px-10 ">
         <div className="w-[100%] max-lg:w-[90%] flex flex-col items-start px-10 max-sm:px-0 xl:px-20 md:px-10 justify-center max-lg:mt-[-50px]">
           <div className="flex flex-col justify-start max-sm:ml-[20px] ">
-            <h2
-              className="flex flex-row font-alata font-bold text-[65px] max-sm:text-[20px] sm:max-md:text-[30px] md:max-lg:text-[40px] lg:max-xl:text-[60px] mt-52 max-sm:mt-48 animate-gradient bg-gradient-to-r from-fuchsia-700 via-cyan-500 to-amber-500 bg-clip-text text-transparent "
-              style={{
-                animation: "gradientAnimation 4s infinite linear",
-              }}
-            >
-              We Design Digital Products
-            </h2>
-            <p className="font-alata font-bold text-[65px] max-sm:text-[20px] sm:max-md:text-[30px] md:max-lg:text-[40px] lg:max-xl:text-[60px]  animate-gradient bg-gradient-to-r from-cyan-500 via-amber-500 to-fuchsia-700 bg-clip-text text-transparent mt-[-10px] max-xl:mt-[5px] ">
-              To Scale Your Brand’s Identity.
-            </p>
-            <div className="flex flex-row items-center mt-[-10px] max-xl:mt-[5px] ">
-              <p className="font-alata font-bold text-[55px] max-sm:text-[18px] max-md:text-[30px] md:max-lg:text-[40px] lg:max-xl:text-[60px]  text-fuchsia-200">
-                With{" "}
+            <header>
+              <title className="sr-only">
+                Top Rated Designer - Custom Web & Mobile App Development Agency
+              </title>
+              <meta
+                name="description"
+                content="Top Rated Designer is a digital product design agency specializing in custom web applications, mobile apps, and UI/UX design services."
+              />
+              <meta
+                property="og:title"
+                content="Top Rated Designer - Digital Product Design Agency"
+              />
+              <meta
+                property="og:description"
+                content="We design custom digital products to scale your brand's identity with web apps, mobile apps, and UI/UX services."
+              />
+              <meta property="og:type" content="website" />
+              <meta property="og:url" content="https://toprateddesigner.com/" />
+              <meta
+                property="og:image"
+                content="https://www.toprateddesigner.com/"
+              />
+              <h1 className="sr-only">
+                Top Rated Designer Digital Product Design Agency
+              </h1>
+              <h2
+                className="flex flex-row font-alata font-bold text-[65px] max-sm:text-[20px] sm:max-md:text-[30px] md:max-lg:text-[40px] lg:max-xl:text-[60px] mt-52 max-sm:mt-48 animate-gradient bg-gradient-to-r from-fuchsia-700 via-cyan-500 to-amber-500 bg-clip-text text-transparent "
+                style={{
+                  animation: "gradientAnimation 4s infinite linear",
+                }}
+              >
+                We Design Digital Products
+              </h2>
+              <p className="font-alata font-bold text-[65px] max-sm:text-[20px] sm:max-md:text-[30px] md:max-lg:text-[40px] lg:max-xl:text-[60px]  animate-gradient bg-gradient-to-r from-cyan-500 via-amber-500 to-fuchsia-700 bg-clip-text text-transparent mt-[-10px] max-xl:mt-[5px] ">
+                To Scale Your Brand’s Identity.
               </p>
-              <div className="ml-4 max-sm:ml-2 w-full ">
-                <span
-                  className="font-alata font-bold text-[55px] max-sm:text-[14px] max-md:text-[25px] md:max-lg:text-[34px] lg:max-xl:text-[60px]  text-fuchsia-200"
-                  ref={typedRef}
-                />
+              <div className="flex flex-row items-center mt-[-10px] max-xl:mt-[5px] ">
+                <p className="font-alata font-bold text-[55px] max-sm:text-[18px] max-md:text-[30px] md:max-lg:text-[40px] lg:max-xl:text-[60px]  text-fuchsia-200">
+                  With{" "}
+                </p>
+                <div className="ml-4 max-sm:ml-2 w-full ">
+                  <span
+                    className="font-alata font-bold text-[55px] max-sm:text-[14px] max-md:text-[25px] md:max-lg:text-[34px] lg:max-xl:text-[60px]  text-fuchsia-200"
+                    ref={typedRef}
+                    aria-live="polite"
+                  />
+                </div>
               </div>
-            </div>
+              <meta
+                name="description"
+                content="Top Rated Designer is a digital product design agency specializing in custom web applications, mobile apps, and UI/UX design services. Get scalable solutions for your brand."
+              ></meta>
+            </header>
           </div>
 
           <div className="mt-10 max-md:hidden flex flex-row w-[50%] justify-center ">
             <MainButton
               text={"Start A Project"}
+              aria-label="Start a project for Web and Mobile Application"
               onclick={() => {
                 setIsModalOpen(true);
               }}
@@ -163,15 +197,15 @@ function HeroSection({ setIsModalOpen }) {
           <div className="flex flex-row justify-center md:hidden  mt-6 w-full">
             <MainButton
               text={"Start A Project"}
+              aria-label="Start a project for Web and Mobile Application"
               onclick={() => {
                 setIsModalOpen(true);
               }}
             />
           </div>
         </div>
-        {/* <div className="w-[30%] max-md:w-[5%] mt-60 flex flex-col items-center justify-center max-lg:hidden"></div> */}
       </div>
-    </div>
+    </section>
   );
 }
 
