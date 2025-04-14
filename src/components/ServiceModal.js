@@ -34,8 +34,16 @@ function ServiceModal({ setShowModal, service }) {
 
         {/* Modal Header */}
         <div className="flex flex-col items-center">
-          <div className="text-3xl mb-2">{service.icon()}</div>
-          <h2 className="text-2xl font-bold">{service.name}</h2>
+          <div className="text-3xl mb-2">
+            <img
+              src={service.image || "/assets/web.png"}
+              alt="Web application development icon"
+              width="60"
+              height="60"
+              loading="lazy"
+            />
+          </div>
+          <h2 className="text-2xl font-bold">{service.title}</h2>
         </div>
         <div className="max-sm:flex-grow max-sm:overflow-y-scroll scrollbar-hide">
           <p className="text-[13px] max-sm:text-[11px] bg-gray-300/10 border-[1px] border-white/10 backdrop-blur-lg text-stone-300 font-medium text-left mt-4 px-2 py-3 rounded-[6px] mx-2">
@@ -45,7 +53,7 @@ function ServiceModal({ setShowModal, service }) {
           {/* Scrollable Content */}
           <div className="mt-4  px-2">
             <ul className="flex flex-col gap-3 text-left pb-4">
-              {service.services?.map((item, index) => (
+              {service.service?.map((item, index) => (
                 <li
                   key={index}
                   className="flex flex-row items-center max-sm:text-[12px] text-stone-200 px-2 rounded-lg"

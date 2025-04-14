@@ -60,7 +60,7 @@ const DrawOutlineButton = ({
   );
 };
 
-export default function MiddleCont() {
+export default function MiddleCont({ service }) {
   const [showmodal, setShowModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   return (
@@ -79,53 +79,59 @@ export default function MiddleCont() {
         Like What We Do
       </h2>
       <div className="flex flex-wrap justify-center mt-10 gap-10" role="list">
-        {services.map((item, index) => (
-          <div
-            key={item.name}
-            role="listitem"
-            className="group"
-            itemScope
-            itemType="https://schema.org/Service"
-            itemProp="hasOfferCatalog"
-          >
-            <DrawOutlineButton
-              gradientClass={gradientShadows[index % gradientShadows.length]}
-              setShowModal={() => {
-                setSelectedService(item);
-                setShowModal(true);
-              }}
-              serviceName={item.name}
-              serviceId={item.id}
+        {service
+          ?.slice()
+          .reverse()
+          .map((item, index) => (
+            <div
+              key={index}
+              role="listitem"
+              className="group"
+              itemScope
+              itemType="https://schema.org/Service"
+              itemProp="hasOfferCatalog"
             >
-              <article
-                className="group relative min-h-[270px] p-4 w-[380px] max-sm:w-[280px] rounded-[4px] bg-teal-200 bg-opacity-10 backdrop-blur-lg border border-teal-900 border-opacity-20 flex flex-col items-center justify-center transition-all duration-300"
-                itemScope
-                itemType="https://schema.org/Offer"
+              <DrawOutlineButton
+                gradientClass={gradientShadows[index % gradientShadows.length]}
+                setShowModal={() => {
+                  setSelectedService(item);
+                  setShowModal(true);
+                }}
+                serviceName={item.title}
+                serviceId={item.uid}
               >
-                <div
-                  className="text-2xl mb-2 w-[20px], h-[20px]"
-                  aria-hidden="true"
+                <article
+                  className="group relative min-h-[270px] p-4 w-[380px] max-sm:w-[280px] rounded-[4px] bg-teal-200 bg-opacity-10 backdrop-blur-lg border border-teal-900 border-opacity-20 flex flex-col items-center justify-center transition-all duration-300"
+                  itemScope
+                  itemType="https://schema.org/Offer"
                 >
-                  {item.icon()}
-                </div>
-                <h3
-                  className="w-[300px] max-sm:w-[220px] mt-[35px] text-[25px] max-sm:text-[20px] font-semibold font-jose"
-                  itemProp="name"
-                >
-                  {item.name}
-                </h3>
-                <meta itemProp="description" content={item.seoDescription} />
-                <meta itemProp="keywords" content={item.keywords.join(", ")} />
-              </article>
-            </DrawOutlineButton>
-          </div>
-        ))}
+                  <div
+                    className="text-2xl mb-2 w-[20px], h-[20px]"
+                    aria-hidden="true"
+                  >
+                    <img src={item.image} className="w-[60px] h-[60px] " />
+                  </div>
+                  <h3
+                    className="w-[300px] max-sm:w-[220px] mt-[35px] text-[25px] max-sm:text-[20px] font-semibold font-jose"
+                    itemProp="name"
+                  >
+                    {item.title}
+                  </h3>
+                  <meta itemProp="description" content={item.seoDesc} />
+                  <meta
+                    itemProp="keywords"
+                    content={item.keywords.join(", ")}
+                  />
+                </article>
+              </DrawOutlineButton>
+            </div>
+          ))}
       </div>
       {showmodal && (
         <ServiceModal
           setShowModal={setShowModal}
           service={selectedService}
-          aria-label={`${selectedService?.name} service details`}
+          aria-label={`${selectedService?.title} service details`}
         />
       )}
     </section>

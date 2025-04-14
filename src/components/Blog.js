@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
-function Blog() {
+function Blog({ blog }) {
   const sectionRef = useRef(null);
   const imagesContainerRef = useRef(null);
   const textContainerRef = useRef(null);
@@ -38,10 +38,10 @@ function Blog() {
     const section = sectionRef.current;
 
     if (isScrollLocked) {
-      textContainer?.addEventListener("wheel", handleScroll, {
-        passive: false,
-      });
-      section?.addEventListener("wheel", handleScroll, { passive: false });
+      // textContainer?.addEventListener("wheel", handleScroll, {
+      //   passive: false,
+      // });
+      // section?.addEventListener("wheel", handleScroll, { passive: false });
     }
 
     return () => {
@@ -137,7 +137,7 @@ function Blog() {
           ref={imagesContainerRef}
           className="lg:w-[50%] md:max-lg:w-[60%] h-full overflow-y-auto relative scrollbar-hide px-10 max-sm:px-5 mt-10 mb-5 pb-5"
         >
-          {blogs.map((item, index) => (
+          {blog?.map((item, index) => (
             <article
               key={index}
               itemScope
@@ -146,17 +146,25 @@ function Blog() {
             >
               <Link
                 href={{
-                  pathname: `/${item.type}`,
+                  pathname: `/${item.slug}`,
                   query: {
-                    blog: JSON.stringify({ id: item.id, name: item.headline }),
+                    blog: JSON.stringify(item),
                   },
                 }}
                 className="contents"
-                aria-label={`Read more about ${item.headline}`}
+                aria-label={`Read more about ${item.title}`}
               >
                 {/* Image section */}
                 <div className="sm:w-1/3 max-sm:w-[50%] max-sm:h-full max-sm:mb-10 flex justify-center items-center">
-                  {item.images()}
+                  <img
+                    src={item.images[1].image_url || "/assets/websit.png"}
+                    alt={
+                      item.slug ||
+                      "High performance website development illustration"
+                    }
+                    className="w-[200px] h-[200px] md:max-lg:w-[100px] md:max-lg:h-[100px] max-sm:w-[150px] max-sm:h-[100px]"
+                    loading="lazy"
+                  />
                 </div>
 
                 {/* Text section */}
@@ -165,13 +173,13 @@ function Blog() {
                     className="text-[22px] md:max-lg:text-[18px] max-sm:text-[18px] font-jose font-semibold"
                     itemProp="headline"
                   >
-                    {item.headline}
+                    {item.title}
                   </h2>
                   <p
                     className="text-[15px] md:max-lg:text-[12px] max-sm:text-[11px] font-write text-stone-950 font-normal leading-[25px] md:max-lg:leading-[20px] max-sm:leading-[18px] text-justify group-hover:text-stone-400 max-sm:text-stone-300 transition-all duration-300 ease-in-out"
                     itemProp="description"
                   >
-                    {item.desc}
+                    {item.summary}
                   </p>
                   <div className="absolute right-10 bottom-[-10px] transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <span className="inline-block animate-slide text-2xl text-white">

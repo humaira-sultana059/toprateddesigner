@@ -1,6 +1,7 @@
 "use client";
 import ContactModal from "@/components/ContactModal";
 import { blogDetails } from "@/constants/constants";
+import { formatDate } from "@/func";
 import Head from "next/head";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -12,51 +13,46 @@ function Page() {
   const blog = searchParams.get("blog");
 
   const blogItem = blog ? JSON.parse(blog) : null;
-  const { id, name } = blogItem || {};
+  const {
+    uid,
+    title,
+    content,
+    images,
+    slug,
+    summary,
+    keywords,
+    updated_at,
+    author,
+  } = blogItem || {};
 
-  const filteredBlog = blogDetails.filter((item) => item.id === id)[0];
+  // const filteredBlog = blogDetails.filter((item) => item.id === id)[0];
 
-  if (!filteredBlog) {
-    return <div className="text-center py-20">Blog post not found</div>;
-  }
+  // if (!filteredBlog) {
+  //   return <div className="text-center py-20">Blog post not found</div>;
+  // }
 
   return (
     <>
       <Head>
-        <title>{filteredBlog.metaTitle || filteredBlog.headline}</title>
-        <meta
-          name="description"
-          content={
-            filteredBlog.metaDesc ||
-            filteredBlog.desc.props.children[0].props.children
-          }
-        />
+        <title>{slug || title}</title>
+        <meta name="description" content={summary} />
         <meta
           name="keywords"
-          content="web development, high-performance websites, SEO, mobile optimization, UX design"
-        />
-        <meta
-          property="og:title"
-          content={filteredBlog.metaTitle || filteredBlog.headline}
-        />
-        <meta
-          property="og:description"
           content={
-            filteredBlog.metaDesc ||
-            filteredBlog.desc.props.children[0].props.children
+            keywords ||
+            "web development, high-performance websites, SEO, mobile optimization, UX design"
           }
         />
+        <meta property="og:title" content={slug} />
+        <meta property="og:description" content={summary} />
         <meta property="og:type" content="article" />
-        <meta
-          property="article:published_time"
-          content={filteredBlog.publishedDate}
-        />
-        <meta property="article:author" content={filteredBlog.author} />
-        <meta property="og:image" content={filteredBlog.images} />
+        <meta property="article:published_time" content={updated_at} />
+        <meta property="article:author" content={author} />
+        <meta property="og:image" content={images[1]} />
         <meta name="twitter:card" content="summary_large_image" />
         <link
           rel="canonical"
-          href={`https://yourwebsite.com/blog/${filteredBlog.type}/${filteredBlog.slug}`}
+          href={`https://toprateddesigner.com/blog/${title}/${slug}`}
         />
       </Head>
 
@@ -71,19 +67,19 @@ function Page() {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://yourwebsite.com",
+                item: "https://toprateddesigner.com",
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "Blog",
-                item: "https://yourwebsite.com/blog",
+                item: "https://toprateddesigner.com/blog",
               },
               {
                 "@type": "ListItem",
                 position: 3,
-                name: filteredBlog.headline,
-                item: `https://yourwebsite.com/blog/${filteredBlog.type}/${filteredBlog.slug}`,
+                name: title,
+                item: `https://toprateddesigner.com/blog/${title}/${slug}`,
               },
             ],
           })}
@@ -112,28 +108,29 @@ function Page() {
             <header className="mb-8">
               <div className="flex flex-row justify-center">
                 <img
-                  src={filteredBlog.images}
+                  src={images[0].image_url}
                   className="h-[500px] max-sm:h-[380px] w-full object-contain"
-                  alt={filteredBlog.altText || filteredBlog.headline}
+                  alt={title}
                   loading="lazy"
                 />
               </div>
               <div className="mt-4 text-sm text-gray-500">
-                <span itemProp="datePublished">
-                  {filteredBlog.publishedDate}
-                </span>
+                <span itemProp="datePublished">{formatDate(updated_at)}</span>
                 <span className="mx-2">•</span>
-                <span itemProp="author">{filteredBlog.author}</span>
+                <span itemProp="author">{author}</span>
               </div>
               <h1
                 className="text-[48px] max-md:text-[32px] max-sm:text-[24px] font-semibold font-sans mt-4"
                 itemProp="headline"
               >
-                {filteredBlog.headline}
+                {title}
               </h1>
             </header>
 
-            <div itemProp="articleBody">{filteredBlog.desc()}</div>
+            <div itemProp="articleBody">
+              {" "}
+              <BlogPost content={content} />
+            </div>
           </article>
         </main>
 
@@ -164,6 +161,23 @@ function Page() {
         onClose={() => setIsModalOpen(false)}
       />
     </>
+  );
+}
+
+function BlogPost({ content }) {
+  // Split the content into paragraphs at each \\n\\n
+  const paragraphs = content
+    .split("\\n\\n")
+    .filter((paragraph) => paragraph.trim() !== ""); // Remove empty paragraphs
+
+  return (
+    <div className="blog-content">
+      {paragraphs.map((paragraph, index) => (
+        <p key={index} className="mb-4">
+          {paragraph}
+        </p>
+      ))}
+    </div>
   );
 }
 

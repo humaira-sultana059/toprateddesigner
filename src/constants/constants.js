@@ -608,7 +608,7 @@ export const team = [
     },
     experience: "5+ years",
     tools: [
-      { name: "Adobe Photoshop", percentage: 95 },
+      { name: "Adobe Photoshop, Illustrator, Figma", percentage: 95 },
       { name: "Illustrator", percentage: 90 },
       { name: "Figma", percentage: 85 },
       { name: "Sketch", percentage: 80 },
@@ -867,232 +867,22 @@ export const blogs = [
 
 export const blogDetails = [
   {
-    id: 1,
-    headline: "How to Build High-Performance Websites: A Complete Guide",
-    type: "website-development",
-    slug: "how-to-build-high-performance-websites",
-    metaTitle: "How to Build High-Performance Websites | Expert Guide",
-    metaDesc:
-      "Learn the essential strategies for building fast, responsive, and user-friendly websites that drive conversions and improve search rankings.",
-    publishedDate: "2024-10-15",
-    author: "Web Development Team",
-    desc: () => (
-      <div className="flex flex-col">
-        <p className="mt-4 text-justify">
-          In today’s digital age, building high-performance websites has become
-          a cornerstone of success for businesses and individuals alike. A
-          website is no longer just a digital placeholder; it is a dynamic
-          platform that can make or break user engagement, brand credibility,
-          and conversion rates. As the online landscape grows increasingly
-          competitive, the need for fast, responsive, and user-friendly websites
-          has never been more critical. High-performance websites are not just
-          about aesthetics; they are about delivering seamless experiences that
-          align with business goals and user expectations. The journey to
-          creating a high-performance website begins with a deep understanding
-          of both front-end and back-end development. Front-end design focuses
-          on the visual and interactive elements that users engage with
-          directly. This includes everything from layout and typography to color
-          schemes and navigation menus. A well-designed front-end ensures that
-          visitors can easily find what they are looking for, while also
-          enjoying a visually appealing experience. On the other hand, back-end
-          development deals with the server-side operations that power the
-          website. This includes database management, server configuration, and
-          application logic. A robust back-end ensures that the website runs
-          smoothly, loads quickly, and can handle high traffic without crashing.
-        </p>
-        <p className="mt-4 text-justify">
-          One of the most critical aspects of building a high-performance
-          website is ensuring mobile optimization. With the majority of internet
-          users accessing websites via mobile devices, a mobile-friendly design
-          is no longer optional—it is essential. Mobile optimization involves
-          creating responsive designs that adapt to different screen sizes and
-          resolutions. This ensures that users have a consistent experience,
-          whether they are browsing on a smartphone, tablet, or desktop
-          computer. Additionally, mobile optimization plays a significant role
-          in search engine rankings, as search engines like Google prioritize
-          mobile-friendly websites in their algorithms. Another key factor in
-          building high-performance websites is speed. In a world where users
-          expect instant access to information, even a few seconds of delay can
-          lead to higher bounce rates and lost opportunities. Optimizing website
-          speed involves a combination of techniques, including image
-          compression, minifying CSS and JavaScript files, and leveraging
-          browser caching. Content Delivery Networks (CDNs) can also be used to
-          distribute website content across multiple servers, reducing latency
-          and improving load times for users in different geographic locations.
-          By prioritizing speed, businesses can create a more enjoyable user
-          experience and increase the likelihood of conversions.
-        </p>
-        <p className="mt-4 text-justify">
-          User experience (UX) and user interface (UI) design are also integral
-          to the success of a high-performance website. UX design focuses on
-          understanding user behavior and creating intuitive pathways that guide
-          visitors toward their goals. This involves conducting user research,
-          creating wireframes, and testing prototypes to identify pain points
-          and areas for improvement. UI design, on the other hand, deals with
-          the visual elements that users interact with, such as buttons, icons,
-          and forms. A well-designed UI enhances usability and makes it easier
-          for users to navigate the website. Together, UX and UI design create a
-          cohesive experience that keeps users engaged and encourages them to
-          take desired actions, such as making a purchase or signing up for a
-          newsletter.
-        </p>
-        <p className="mt-4 text-justify">
-          Search engine optimization (SEO) is another crucial component of
-          building high-performance websites. SEO involves optimizing website
-          content and structure to improve visibility in search engine results.
-          This includes using relevant keywords, creating high-quality content,
-          and building backlinks from reputable sources. By implementing SEO
-          best practices, businesses can attract more organic traffic and
-          increase their chances of reaching their target audience.
-          Additionally, SEO helps establish credibility and authority, as
-          websites that rank higher in search results are often perceived as
-          more trustworthy. Security is another aspect that cannot be overlooked
-          when building high-performance websites. With cyber threats on the
-          rise, ensuring the safety of user data and website integrity is
-          paramount. This involves implementing SSL certificates to encrypt
-          data, regularly updating software and plugins, and using strong
-          passwords. By prioritizing security, businesses can protect their
-          websites from hacking attempts and build trust with their users.
-        </p>
-        <p className="mt-4 text-justify">
-          In conclusion, building high-performance websites requires a holistic
-          approach that combines front-end and back-end development, mobile
-          optimization, speed optimization, UX/UI design, SEO, and security. By
-          focusing on these elements, businesses can create websites that not
-          only look great but also perform exceptionally well. A
-          high-performance website is more than just a digital asset; it is a
-          powerful tool that can drive growth, improve conversions, and enhance
-          the overall user experience. As the digital landscape continues to
-          evolve, investing in high-performance websites will remain a key
-          strategy for staying ahead of the competition and achieving long-term
-          success.
-        </p>
-      </div>
-    ),
-    images: "/assets/blog/website.jpg",
-    altText: "High-performance website development process illustration",
-  },
-  {
     id: 2,
-    headline:
-      "Seamless Mobile App Development: Creating Engaging User Experiences",
+    headline: "",
     type: "mobile-app-development",
-    slug: "seamless-mobile-app-engaging-experiences",
+    slug: "",
     metaTitle:
       "Mobile App Development Guide: Building Seamless User Experiences",
-    metaDesc:
-      "Discover expert strategies for creating high-performance mobile apps with engaging UX, robust security, and cutting-edge technologies like AI and 5G.",
+    metaDesc: "",
     publishedDate: "2024-09-20",
     author: "Mobile Development Team",
     desc: () => (
       <div className="flex flex-col">
-        <p className="mt-4 text-justify">
-          In today's fast-paced digital world, mobile applications have become
-          an essential part of everyday life, shaping the way users interact,
-          shop, communicate, and engage with businesses. The growing reliance on
-          mobile technology has driven the demand for seamless applications that
-          not only function flawlessly but also provide an engaging and
-          intuitive user experience. As businesses strive to stay ahead in an
-          increasingly competitive market, mobile app development has evolved to
-          prioritize performance, usability, and innovation. With the rapid
-          advancement of technology, users now expect mobile applications to be
-          fast, responsive, and visually appealing. The importance of a smooth
-          user experience cannot be overstated, as even the slightest lag or
-          poor interface design can lead to user dissatisfaction and app
-          abandonment. This has made UI/UX design a crucial element in mobile
-          app development, ensuring that applications are not only functional
-          but also aesthetically pleasing and easy to navigate.
-        </p>
-        <p className="mt-4 text-justify">
-          One of the key aspects of seamless mobile applications is their
-          ability to provide real-time interactions without delays. Whether it
-          is an e-commerce platform, a social media app, or a service-based
-          application, users expect instant responses to their actions. This
-          requires developers to implement optimized coding practices, efficient
-          database management, and robust backend support to handle large
-          amounts of user data without compromising performance. Moreover,
-          mobile optimization has become a fundamental requirement for
-          businesses looking to establish a strong digital presence. With a
-          significant portion of internet traffic coming from mobile devices,
-          ensuring that applications are mobile-friendly is no longer optional.
-          Mobile-first development approaches, adaptive designs, and
-          cross-platform compatibility have become standard practices to provide
-          users with a consistent experience across different devices and screen
-          sizes. Security is another critical factor in mobile app development,
-          as users entrust applications with sensitive personal and financial
-          information. Developers must prioritize data encryption, secure
-          authentication methods, and regular security updates to protect user
-          data and prevent cyber threats. A seamless app experience is not just
-          about smooth navigation and attractive visuals; it also encompasses
-          trust and reliability, making security a top priority for any
-          successful mobile application.
-        </p>
-        <p className="mt-4 text-justify">
-          Performance optimization plays a significant role in delivering a
-          seamless experience. Slow load times, crashes, and high battery
-          consumption can deter users from engaging with an application. To
-          overcome these challenges, developers leverage advanced caching
-          techniques, minimize API calls, and optimize code to enhance speed and
-          efficiency. The integration of artificial intelligence and machine
-          learning has also contributed to improving app performance, allowing
-          for predictive analytics, personalized content recommendations, and
-          automated processes that streamline user interactions. The competitive
-          landscape of mobile applications has led to continuous innovation in
-          app development methodologies. Agile development and DevOps practices
-          have gained prominence, enabling faster deployment, regular updates,
-          and enhanced collaboration among development teams. These practices
-          not only accelerate the app development process but also ensure that
-          applications remain up-to-date with evolving user expectations and
-          technological advancements. The role of progressive web applications
-          (PWAs) has also become increasingly significant in providing seamless
-          app experiences. PWAs offer the best of both web and mobile
-          applications, delivering fast-loading, engaging, and reliable
-          performance even in low-network conditions. Businesses that adopt PWA
-          technology can benefit from increased user engagement, reduced
-          development costs, and improved accessibility across multiple devices.
-        </p>
-        <p className="mt-4 text-justify">
-          Another trend shaping the future of mobile app development is the
-          integration of augmented reality (AR) and virtual reality (VR)
-          experiences. These technologies are revolutionizing user engagement by
-          offering immersive and interactive features that enhance storytelling,
-          e-commerce shopping experiences, and entertainment applications.
-          AR-powered applications have seen widespread adoption in industries
-          such as retail, education, and healthcare, demonstrating the growing
-          demand for innovative app experiences. Additionally, voice-enabled
-          applications and AI-driven chatbots have become integral to enhancing
-          user interactions. Voice search and voice assistants have transformed
-          the way users interact with apps, making navigation more convenient
-          and efficient. AI chatbots provide real-time customer support,
-          improving response times and customer satisfaction. The integration of
-          these technologies has made applications more intuitive and
-          user-friendly, contributing to an overall seamless experience. The
-          rise of 5G technology is further revolutionizing mobile app
-          development by enabling faster data speeds, lower latency, and
-          enhanced connectivity. This advancement allows for the development of
-          more sophisticated applications that rely on high-speed streaming,
-          real-time communication, and cloud-based services. Businesses
-          leveraging 5G technology can deliver richer multimedia experiences and
-          enhance user engagement through seamless interactions. As mobile
-          applications continue to evolve, businesses must prioritize seamless
-          performance, user engagement, and innovative features to stay
-          competitive. A well-designed, intuitive, and high-performing
-          application not only attracts users but also fosters brand loyalty and
-          drives business growth. By embracing the latest advancements in mobile
-          app development, businesses can create applications that deliver
-          exceptional user experiences and remain ahead in the digital
-          landscape.
-        </p>
-        <p className="mt-4 text-justify">
-          Ultimately, the success of a mobile application depends on its ability
-          to provide a seamless and engaging experience. From intuitive UI/UX
-          design and performance optimization to security enhancements and
-          emerging technologies, every aspect of app development plays a crucial
-          role in shaping user satisfaction. As businesses navigate the
-          ever-changing digital environment, investing in seamless mobile
-          applications will be key to achieving sustained success and meeting
-          the evolving demands of modern users.
-        </p>
+        <p className="mt-4 text-justify"></p>
+        <p className="mt-4 text-justify"></p>
+        <p className="mt-4 text-justify"></p>
+        <p className="mt-4 text-justify"></p>
+        <p className="mt-4 text-justify"></p>
       </div>
     ),
     images: "/assets/blog/mobile.jpg",

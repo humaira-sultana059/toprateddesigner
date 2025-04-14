@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from "react";
 import Typed from "typed.js";
 import MainButton from "./MainButton";
 
-function HeroSection({ setIsModalOpen }) {
+function HeroSection({ setIsModalOpen, image }) {
   const canvasRef = useRef(null);
   const typedRef = useRef(null);
 
@@ -111,7 +111,7 @@ function HeroSection({ setIsModalOpen }) {
       id="home"
       className="bg-stone-950 h-[100vh] max-sm:h-[44vh] sm:max-md:h-[60vh] md:max-lg:h-[50vh] lg:max-xl:h-[70vh] w-full bg-contain bg-no-repeat bg-center "
       style={{
-        backgroundImage: "url('assets/TopRatedBg.png')",
+        backgroundImage: `url(${image})` || "url('assets/TopRatedBg.png')",
       }}
       aria-label="Top Rated Design"
     >

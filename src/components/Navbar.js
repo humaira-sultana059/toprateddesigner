@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi"; // Import menu icons
 import Head from "next/head";
 
-export default function Navbar({ setIsModalOpen }) {
+export default function Navbar({ setIsModalOpen, logo }) {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for sidebar menu
@@ -93,9 +93,10 @@ export default function Navbar({ setIsModalOpen }) {
             <div className="flex flex-row justify-between items-center w-full mx-10">
               <img
                 onClick={() => handleNavClick("home")}
-                src="/assets/logo-2.svg"
-                className="w-[120px]"
+                src={logo || "/assets/logo-2.svg"}
+                className="w-[120px] cursor-pointer"
               />
+
               <div className="flex flex-row items-center justify-end font-jose font-semibold text-white ml-10">
                 <SlideTabs
                   handleNavClick={handleNavClick}

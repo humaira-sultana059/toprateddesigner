@@ -1,12 +1,11 @@
 "use client";
-import { team } from "@/constants/constants";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-function TeamNew() {
+function TeamNew({ expert }) {
   const [index, setIndex] = useState(0);
-  const totalItems = team.length;
-  const duplicatedTeam = [...team, ...team, ...team];
+  const totalItems = expert?.length;
+  const duplicatedTeam = expert ? [...expert, ...expert, ...expert] : [];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -66,10 +65,8 @@ function TeamNew() {
               >
                 <div className="flex flex-row justify-center">
                   <img
-                    src={member.image.src}
-                    alt={member.image.alt}
-                    width={member.image.width}
-                    height={member.image.height}
+                    src={member.image}
+                    alt={member.name}
                     className="w-[100px] h-[110px] shadow-md object-cover border-[1px] border-cyan-400 rounded-[4px]"
                     loading="lazy"
                   />
@@ -77,11 +74,11 @@ function TeamNew() {
                 <div className="mt-[20px] text-center">
                   <h3 className="text-[20px]  font-bold">{member.name}</h3>
                   <p className="text-[13px] text-gray-300" itemProp="jobTitle">
-                    {member.position}
+                    {member.type}
                   </p>
                   <p className="text-[10px] text-gray-400">
-                    <meta itemProp="experience" content={member.experience} />
-                    {member.experience} of experience
+                    <meta itemProp="experience" content={member.exp} />
+                    {member.exp} of experience
                   </p>
                 </div>
                 {/* Expertise Technologies */}
@@ -90,21 +87,19 @@ function TeamNew() {
                     Expertise Technologies
                   </h4>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    {member.tools.map((tool, idx) => (
+                    {member.technology.map((tool, idx) => (
                       <span
                         key={idx}
                         className="px-[6px] py-[2px] text-[12px] text-stone-200 border-[1px] border-cyan-400 rounded-full"
                         itemProp="knowsAbout"
                       >
-                        {tool.name}
+                        {tool}
                       </span>
                     ))}
                   </div>
                 </div>
-                <meta itemProp="description" content={member.seoDescription} />
-                {member.socialLinks.linkedin && (
-                  <link itemProp="url" href={member.socialLinks.linkedin} />
-                )}
+                <meta itemProp="description" content={member.type} />
+                {member.type && <link itemProp="url" href={member.type} />}
               </motion.div>
             );
           })}

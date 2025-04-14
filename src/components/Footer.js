@@ -4,7 +4,7 @@ import { services, socialMedia, terms } from "@/constants/constants";
 import MainButton from "./MainButton";
 import Link from "next/link";
 
-export default function Footer({ setIsModalOpen }) {
+export default function Footer({ setIsModalOpen, logo }) {
   const handleNavClick = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -40,12 +40,13 @@ export default function Footer({ setIsModalOpen }) {
         {/* Introduction */}
         <div className="flex flex-col max-md:items-center max-md:w-full max-md:mb-10">
           <img
-            src="assets/logo-2.svg"
+            src={logo || "/assets/logo-2.svg"}
             alt="Top Rated Designer Logo"
             className="w-[220px] h-[120px] mt-[-50px] cursor-pointer"
             onClick={() => handleNavClick("home")}
             loading="lazy"
           />
+
           <p className="w-[300px] md:max-lg:w-[200px] max-md:w-full font-lato text-[12px] text-justify text-white/60">
             Empowering Ideas, Crafting Innovation. At TOP RATED DESIGNER, we
             turn visions into reality through cutting-edge code and creative

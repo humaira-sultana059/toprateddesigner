@@ -1,11 +1,10 @@
 "use client";
-import { partners } from "@/constants/constants";
 import { motion } from "framer-motion";
 import React from "react";
 
-export const PartnersSection = () => {
+export const PartnersSection = ({ patner }) => {
   // Duplicate the logos to create a seamless loop
-  const duplicatedPartners = [...partners, ...partners];
+  const duplicatedPartners = patner ? [...patner, ...patner] : [];
 
   return (
     <section
@@ -38,7 +37,7 @@ export const PartnersSection = () => {
         >
           {duplicatedPartners.map((partner, index) => (
             <div
-              key={`${partner.id}-${index}`}
+              key={`${partner.uid}-${index}`}
               className="text-2xl w-[220px] h-[150px] sm:max-md:w-[170px] sm:max-md:h-[100px] max-sm:w-[100px] max-sm:h-[70px] mb-10 mx-[20px] backdrop-blur-lg border-[1px] border-white/10 bg-gray-900/50 shadow-md shadow-indigo-950/60 rounded-xl justify-center items-center flex flex-row"
               itemScope
               itemType="https://schema.org/Organization"
@@ -53,11 +52,9 @@ export const PartnersSection = () => {
                   aria-label={`Visit ${partner.name} website`}
                 >
                   <img
-                    src={partner.logo.src}
-                    alt={partner.logo.alt}
-                    width={partner.logo.width}
-                    height={partner.logo.height}
-                    className="object-contain curson-normal"
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="object-contain curson-normal w-[100px] h-[100px] "
                     loading="lazy"
                     itemProp="logo"
                   />
@@ -101,11 +98,9 @@ export const PartnersSection = () => {
                   aria-label={`Visit ${partner.name} website`}
                 >
                   <img
-                    src={partner.logo.src}
-                    alt={partner.logo.alt}
-                    width={partner.logo.width}
-                    height={partner.logo.height}
-                    className="object-contain curson-normal"
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="object-contain curson-normal w-[100px] h-[100px] "
                     loading="lazy"
                     itemProp="logo"
                   />
