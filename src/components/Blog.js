@@ -90,7 +90,7 @@ function Blog({ blog }) {
           content="Expert insights on web development, mobile apps, SEO, cloud solutions, AI, and CMS technology."
         />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://yourwebsite.com/blog" />
+        <link rel="canonical" href="https://toprateddesigner.com/" />
       </Head>
       <div
         ref={sectionRef}
@@ -100,7 +100,7 @@ function Blog({ blog }) {
           backgroundImage: "url('assets/blog-bg2.png')",
         }}
         itemScope
-        itemType="https://schema.org/Blog"
+        itemType="https://toprateddesigner.com/"
       >
         {/* Text div */}
         <div
@@ -109,17 +109,18 @@ function Blog({ blog }) {
         >
           <h1 className="flex flex-row w-full lg:mt-8">
             <span className="text-[55px] max-sm:text-[24px] text-stone-200 font-arsenal font-semibold leading-[55px] max-sm:leading-[30px]">
-              How Do We Use Latest
+              Tech of
               <span className="block text-[55px] max-sm:text-[24px] text-stone-400 md:text-stone-700 font-arsenal font-semibold">
-                Technology
+                Tomorrow
               </span>
             </span>
           </h1>
           <div className="flex flex-row w-full h-[120px] pt-4 pl-1 pr-5">
             <p className="lg:text-[20px] sm:max-lg:text-[16px] max-sm:text-[13px] text-zinc-100 lg:text-zinc-900 font-write font-medium lg:leading-[30px] text-justify">
-              We use the latest technologies to create fast, secure, and
-              scalable digital solutions, ensuring seamless user experiences and
-              future-ready applications.
+              Explore groundbreaking advancements in AI, blockchain, and quantum
+              computing. We dissect emerging technologies redefining industries,
+              enhancing user experiences, and solving global challenges. Stay
+              ahead with insights into trends shaping the future—today.
             </p>
           </div>
           <div className="flex flex-row justify-center max-md:mt-10 md:max-lg:mt-28 lg:max-xl:mt-28">
@@ -141,7 +142,7 @@ function Blog({ blog }) {
             <article
               key={index}
               itemScope
-              itemType="https://schema.org/BlogPosting"
+              itemType="https://toprateddesigner.com/"
               className="group flex max-sm:flex-col bg-cyan-700/20 backdrop-blur-lg border border-stone-200/30 hover:border-none hover:bg-slate-900 py-5 px-2 my-6 cursor-pointer transition-all duration-1000 ease-in-out hover:shadow-xl hover:shadow-pink-700/50 relative max-sm:items-center"
             >
               <Link
