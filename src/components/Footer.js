@@ -4,7 +4,7 @@ import { services, socialMedia, terms } from "@/constants/constants";
 import MainButton from "./MainButton";
 import Link from "next/link";
 
-export default function Footer({ setIsModalOpen, logo }) {
+export default function Footer({ setIsModalOpen, logo, award }) {
   const handleNavClick = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -42,7 +42,7 @@ export default function Footer({ setIsModalOpen, logo }) {
           <img
             src={logo || "/assets/logo-2.svg"}
             alt="Top Rated Designer Logo"
-            className="w-[220px] h-[120px] mt-[-50px] cursor-pointer"
+            className="w-[220px] h-[120px] cursor-pointer"
             onClick={() => handleNavClick("home")}
             loading="lazy"
           />
@@ -53,6 +53,26 @@ export default function Footer({ setIsModalOpen, logo }) {
             solutions. Let's shape the future together—one line of code at a
             time!
           </p>
+          <div className=" mt-3 ">
+            <h2 className="pb-1 text-[18px] md:max-lg:text-[15px] text-white/90 font-lato font-bold">
+              Verified On
+            </h2>
+            <div className="flex flex-row">
+              {award
+                ?.slice()
+                .reverse()
+                .map((item, index) => (
+                  <a key={index} itemProp="link" href={item.link}>
+                    <img
+                      src={item.logo}
+                      alt="Top Rated Designer Logo"
+                      className="w-[80px] h-[45px] mr-3 cursor-pointer"
+                      loading="lazy"
+                    />
+                  </a>
+                ))}
+            </div>
+          </div>
         </div>
         {/* Terms & conditions */}
         <nav aria-label="Legal information">

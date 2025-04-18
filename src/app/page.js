@@ -25,6 +25,7 @@ export default function Home() {
   const [review, setReview] = useState(null);
   const [patner, setPatner] = useState(null);
   const [blog, setBlog] = useState(null);
+  const [award, setAward] = useState(null);
   const [loadingTimeout, setLoadingTimeout] = useState(false);
   const [error, setError] = useState(false);
 
@@ -38,14 +39,15 @@ export default function Home() {
         !expert &&
         !review &&
         !patner &&
-        !blog
+        !blog &&
+        !award
       ) {
         setLoadingTimeout(true);
       }
     }, 120000);
 
     return () => clearTimeout(timeoutId);
-  }, [data, service, port, expert, review, patner, blog]);
+  }, [data, service, port, expert, review, patner, blog, award]);
 
   const fetchAllData = async () => {
     try {
@@ -58,6 +60,7 @@ export default function Home() {
         reviewRes,
         patnerRes,
         blogRes,
+        awardRes,
       ] = await Promise.all([
         axios.get(`${BASE_URL}/website`),
         axios.get(`${BASE_URL}/wedos`),
@@ -66,6 +69,7 @@ export default function Home() {
         axios.get(`${BASE_URL}/reviews`),
         axios.get(`${BASE_URL}/patners`),
         axios.get(`${BASE_URL}/blogs`),
+        axios.get(`${BASE_URL}/award`),
       ]);
 
       setData(websiteResponse.data[0]);
@@ -75,6 +79,7 @@ export default function Home() {
       setReview(reviewRes.data);
       setPatner(patnerRes.data);
       setBlog(blogRes.data);
+      setAward(awardRes.data);
       // console.log(patnerRes.data);
     } catch (error) {
       console.log("Error fetching data:", error);
@@ -136,7 +141,16 @@ export default function Home() {
   }
 
   //  console.log(blog);
-  if (!data && !service && !port && !expert && !review && !patner && !blog) {
+  if (
+    !data &&
+    !service &&
+    !port &&
+    !expert &&
+    !review &&
+    !patner &&
+    !blog &&
+    !award
+  ) {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <div className="flex flex-col items-center">
@@ -164,7 +178,11 @@ export default function Home() {
       <PartnersSection patner={patner} />
       <Blog blog={blog} />
       <div ref={footerRef}>
-        <Footer logo={data?.image} setIsModalOpen={setIsModalOpen} />
+        <Footer
+          award={award}
+          logo={data?.image}
+          setIsModalOpen={setIsModalOpen}
+        />
       </div>
       <ContactModal
         isOpen={isModalOpen}

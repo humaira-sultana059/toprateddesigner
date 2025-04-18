@@ -173,7 +173,7 @@ function BlogPost({ content }) {
   return (
     <div className="blog-content">
       {paragraphs.map((paragraph, index) => (
-        <p key={index} className="mb-4">
+        <p key={index} className="mb-4 text-justify">
           {paragraph}
         </p>
       ))}
