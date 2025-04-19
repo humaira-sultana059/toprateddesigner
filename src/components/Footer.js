@@ -65,7 +65,7 @@ export default function Footer({ setIsModalOpen, logo, award }) {
                   <a key={index} itemProp="link" href={item.link}>
                     <img
                       src={item.logo}
-                      alt="Top Rated Designer Logo"
+                      alt="web development agency"
                       className="w-[80px] h-[45px] mr-3 cursor-pointer"
                       loading="lazy"
                     />
