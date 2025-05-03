@@ -142,7 +142,20 @@ function Page() {
             </header>
 
             <div itemProp="articleBody">
-              <BlogPost content={content} />
+              <div
+                className="
+    prose prose-lg max-w-none text-white text-justify
+    prose-headings:text-white
+    prose-p:text-white
+    prose-ul:text-white
+    prose-li:text-white
+    [&_h2]:mt-4 [&_h2]:mb-2
+    [&_p]:mt-2 [&_p]:mb-2
+    [&_ul]:mt-2 [&_ul]:mb-2
+    [&_li]:mb-1
+  "
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
             </div>
           </article>
         </main>
@@ -168,22 +181,6 @@ function Page() {
         onClose={() => setIsModalOpen(false)}
       />
     </>
-  );
-}
-
-function BlogPost({ content }) {
-  const paragraphs = content
-    .split("\\n\\n")
-    .filter((paragraph) => paragraph.trim() !== "");
-
-  return (
-    <div className="blog-content">
-      {paragraphs.map((paragraph, index) => (
-        <p itemProp="articleBody" key={index} className="mb-4 text-justify">
-          {paragraph}
-        </p>
-      ))}
-    </div>
   );
 }
 
