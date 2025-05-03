@@ -144,16 +144,23 @@ function Page() {
             <div itemProp="articleBody">
               <div
                 className="
-    prose prose-lg max-w-none text-white text-justify
-    prose-headings:text-white
-    prose-p:text-white
-    prose-ul:text-white
-    prose-li:text-white
-    [&_h2]:mt-4 [&_h2]:mb-2
-    [&_p]:mt-2 [&_p]:mb-2
-    [&_ul]:mt-2 [&_ul]:mb-2
-    [&_li]:mb-1
-  "
+      prose prose-base sm:prose-lg max-w-none text-white text-justify
+      prose-headings:text-white
+      prose-p:text-white
+      prose-ul:text-white
+      prose-li:text-white
+      prose-strong:text-white
+      prose-em:text-white
+      prose-blockquote:text-white
+
+      [&_h2]:mt-4 [&_h2]:mb-2
+      [&_h2]:font-semibold
+      [&_h2]:text-[20px] sm:[&_h2]:text-[24px] md:[&_h2]:text-[28px]
+
+      [&_p]:mt-2 [&_p]:mb-2
+      [&_ul]:mt-2 [&_ul]:mb-2
+      [&_li]:mb-1
+    "
                 dangerouslySetInnerHTML={{ __html: content }}
               />
             </div>
